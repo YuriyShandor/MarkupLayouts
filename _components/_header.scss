@@ -1,0 +1,73 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  //border: 1px solid red;
+}
+
+body {
+  font-family: Gotham, Arial sans-serif;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@import "./_nav-bar.scss";
+
+header {
+  width: 100%;
+  -webkit-box-shadow: 15px 0 175px -15px #efeded;
+          box-shadow: 15px 0 175px -15px #efeded;
+  position: fixed;
+  background: #fff;
+  z-index: 100;
+
+  .header-block {
+    width: inherit;
+    .neretina__logo {
+      display: none;
+    }
+  }
+}
+
+.header-nav_fixed {
+  height: 92px * 0.8;
+}
+
+@media only screen and (max-width : 1199px) {
+
+}
+
+@media only screen and (max-width : 991px) {
+  header {
+    .header-block {
+      .neretina__logo {
+        display: inline-block;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 767px) {
+
+}
+
+@media only screen and (max-width : 575px) {
+  header {
+    .header-block {
+      .neretina__logo {
+        width: 125px;
+      }
+    }
+  }
+
+  // .header-nav_fixed {
+  //   padding: 0 0px;
+  // }
+}
