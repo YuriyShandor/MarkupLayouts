@@ -1004,6 +1004,7 @@ section:nth-child(odd) {
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 5px;
 }
 
 .flip-container .flipper-front {
@@ -1098,4 +1099,31 @@ section:nth-child(odd) {
 
 .flip-container:nth-child(4) .flipper-front {
   background: url(../img/autumn.jpg) no-repeat center/cover;
+}
+
+@media only screen and (max-width: 1199px) {
+  .flip-container {
+    height: 37vh;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .flip-container {
+    margin: 15px 0px;
+    width: 90%;
+    height: 45vh;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .flip-container {
+    width: 100%;
+    height: 37vh;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .flip-container {
+    height: 40vh;
+  }
 }
