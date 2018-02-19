@@ -258,6 +258,8 @@
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -405,6 +407,96 @@ body {
   }
 }
 
+section {
+  width: 100%;
+  padding: 100px 0;
+}
+
+section:nth-child(even) {
+  background: #e0e0e0;
+}
+
+section:nth-child(odd) {
+  background: #fafafa;
+}
+
+.section-heading {
+  width: inherit;
+  padding: 0 200px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-family: JosefinSans;
+  font-size: 36px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.section-heading p {
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 1199px) {
+  section {
+    padding: 90px 0;
+  }
+  .section-heading {
+    padding: 0 150px;
+  }
+  .section-heading h2 {
+    font-size: 34px;
+  }
+  .section-heading p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  section {
+    padding: 75px 0;
+  }
+  .section-heading {
+    padding: 0 100px;
+  }
+  .section-heading h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .section-heading p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  section {
+    padding: 50px 0;
+  }
+  .section-heading {
+    padding: 0 50px;
+  }
+  .section-heading h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .section-heading p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .section-heading {
+    padding: 0 25px;
+  }
+  .section-heading h2 {
+    font-size: 24px;
+  }
+  .section-heading p {
+    font-size: 14px;
+  }
+}
+
 .footer {
   width: 100%;
   padding-bottom: 25px;
@@ -458,8 +550,4 @@ body {
 
 .footer ul li:hover a {
   color: #b71c1c;
-}
-
-section {
-  padding: 100px;
 }
