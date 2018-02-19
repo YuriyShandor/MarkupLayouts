@@ -16,9 +16,9 @@ $color__whatsapp: #29a71a;
 $color__telegram: #269ed1;
 $color__skype: #00aff0;
 $color__stack-overflow: #ffa500;
-$color__imdb: #e2b51c;
 
 .social-icons {
+  margin-bottom: 75px;
   width: 100%;
   display: -ms-flex;
   display: -webkit-box;
@@ -84,6 +84,7 @@ $color__imdb: #e2b51c;
 
   &__fb {
     color: $color__fb;
+    border: 1.5px solid $color__fb;
 
     &:hover {
       &::before {
@@ -94,6 +95,7 @@ $color__imdb: #e2b51c;
 
   &__twitter {
     color: $color__twitter;
+    border: 1.5px solid $color__twitter;
 
     &:hover {
       &::before {
@@ -104,6 +106,7 @@ $color__imdb: #e2b51c;
 
   &__instagram {
     color: $color__instagram;
+    border: 1.5px solid $color__instagram;
 
     &:hover {
       &::before {
@@ -114,6 +117,7 @@ $color__imdb: #e2b51c;
 
   &__google-plus {
     color: $color__google-plus;
+    border: 1.5px solid $color__google-plus;
 
     &:hover {
       &::before {
@@ -124,6 +128,7 @@ $color__imdb: #e2b51c;
 
   &__github {
     color: $color__github;
+    border: 1.5px solid $color__github;
 
     &:hover {
       &::before {
@@ -134,6 +139,7 @@ $color__imdb: #e2b51c;
 
   &__linkedin {
     color: $color__linkedin;
+    border: 1.5px solid $color__linkedin;
 
     &:hover {
       &::before {
@@ -144,6 +150,7 @@ $color__imdb: #e2b51c;
 
   &__pinterest {
     color: $color__pinterest;
+    border: 1.5px solid $color__pinterest;
 
     &:hover {
       &::before {
@@ -154,6 +161,7 @@ $color__imdb: #e2b51c;
 
   &__behance {
     color: $color__behance;
+    border: 1.5px solid $color__behance;
 
     &:hover {
       &::before {
@@ -164,6 +172,7 @@ $color__imdb: #e2b51c;
 
   &__vimeo {
     color: $color__vimeo;
+    border: 1.5px solid $color__vimeo;
 
     &:hover {
       &::before {
@@ -174,6 +183,7 @@ $color__imdb: #e2b51c;
 
   &__youtube {
     color: $color__youtube;
+    border: 1.5px solid $color__youtube;
 
     &:hover {
       &::before {
@@ -184,6 +194,7 @@ $color__imdb: #e2b51c;
 
   &__whatsapp {
     color: $color__whatsapp;
+    border: 1.5px solid $color__whatsapp;
 
     &:hover {
       &::before {
@@ -194,6 +205,7 @@ $color__imdb: #e2b51c;
 
   &__telegram {
     color: $color__telegram;
+    border: 1.5px solid $color__telegram;
 
     &:hover {
       &::before {
@@ -204,6 +216,7 @@ $color__imdb: #e2b51c;
 
   &__skype {
     color: $color__skype;
+    border: 1.5px solid $color__skype;
 
     &:hover {
       &::before {
@@ -214,6 +227,7 @@ $color__imdb: #e2b51c;
 
   &__stack-overflow {
     color: $color__stack-overflow;
+    border: 1.5px solid $color__stack-overflow;
 
     &:hover {
       &::before {
@@ -221,18 +235,225 @@ $color__imdb: #e2b51c;
       }
     }
   }
+}
 
-  &__imdb {
-    color: $color__imdb;
+.rounded-social-icons {
+  width: 100%;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+
+  a {
+    text-decoration: none;
+    font-size: 24px;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    color: #fff;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+
+    &::before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .svg-inline--fa {
+      z-index: 10;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+    }
 
     &:hover {
       &::before {
-        background: $color__imdb;
+        background: #fff;
+      }
+
+      .svg-inline--fa {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
       }
     }
   }
-}
 
+  &__fb {
+    &::before {
+      background: $color__fb;
+      border: 1.5px solid $color__fb;
+    }
+
+    &:hover {
+      color: $color__fb;
+    }
+  }
+
+  &__twitter {
+    &::before {
+      background: $color__twitter;
+      border: 1.5px solid $color__twitter;
+    }
+
+    &:hover {
+      color: $color__twitter;
+    }
+  }
+
+  &__instagram {
+    &::before {
+      background: $color__instagram;
+      border: 1.5px solid $color__instagram;
+    }
+
+    &:hover {
+      color: $color__instagram;
+    }
+  }
+
+  &__google-plus {
+    &::before {
+      background: $color__google-plus;
+      border: 1.5px solid $color__google-plus;
+    }
+
+    &:hover {
+      color: $color__google-plus;
+    }
+  }
+
+  &__github {
+    &::before {
+      background: $color__github;
+      border: 1.5px solid $color__github;
+    }
+
+    &:hover {
+      color: $color__github;
+    }
+  }
+
+  &__linkedin {
+    &::before {
+      background: $color__linkedin;
+      border: 1.5px solid $color__linkedin;
+    }
+
+    &:hover {
+      color: $color__linkedin;
+    }
+  }
+
+  &__pinterest {
+    &::before {
+      background: $color__pinterest;
+      border: 1.5px solid $color__pinterest;
+    }
+
+    &:hover {
+      color: $color__pinterest;
+    }
+  }
+
+  &__behance {
+    &::before {
+      background: $color__behance;
+      border: 1.5px solid $color__behance;
+    }
+
+    &:hover {
+      color: $color__behance;
+    }
+  }
+
+  &__vimeo {
+    &::before {
+      background: $color__vimeo;
+      border: 1.5px solid $color__vimeo;
+    }
+
+    &:hover {
+      color: $color__vimeo;
+    }
+  }
+
+  &__youtube {
+    &::before {
+      background: $color__youtube;
+      border: 1.5px solid $color__youtube;
+    }
+
+    &:hover {
+      color: $color__youtube;
+    }
+  }
+
+  &__whatsapp {
+    &::before {
+      background: $color__whatsapp;
+      border: 1.5px solid $color__whatsapp;
+    }
+
+    &:hover {
+      color: $color__whatsapp;
+    }
+  }
+
+  &__telegram {
+    &::before {
+      background: $color__telegram;
+      border: 1.5px solid $color__telegram;
+    }
+
+    &:hover {
+      color: $color__telegram;
+    }
+  }
+
+  &__skype {
+    &::before {
+      background: $color__skype;
+      border: 1.5px solid $color__skype;
+    }
+
+    &:hover {
+      color: $color__skype;
+    }
+  }
+
+  &__stack-overflow {
+    &::before {
+      background: $color__stack-overflow;
+      border: 1.5px solid $color__stack-overflow;
+    }
+
+    &:hover {
+      color: $color__stack-overflow;
+    }
+  }
+}
 
 @media only screen and (max-width : 1199px) {
 
