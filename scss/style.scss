@@ -2,7 +2,236 @@
 
 @import "./_components/header&footer.scss";
 
+$color__fb: #3b5998;
+$color__twitter: #55acee;
+$color__instagram: #125688;
+$color__google-plus: #dd4b39;
+$color__github: #000;
+$color__linkedin: #007bb5;
+$color__pinterest: #cb2027;
+$color__behance: #0069ff;
+$color__vimeo: #1ab7ea;
+$color__youtube: #bb0000;
+$color__whatsapp: #29a71a;
+$color__telegram: #269ed1;
+$color__skype: #00aff0;
+$color__stack-overflow: #ffa500;
+$color__imdb: #e2b51c;
 
+.social-icons {
+  width: 100%;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+    font-size: 24px;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    .svg-inline--fa {
+      z-index: 10;
+    }
+
+    &::before {
+      display: block;
+      content: '';
+      width: 0;
+      height: 0;
+      border-radius: 0;
+      background: #000;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: #fff;
+
+      &::before {
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+      }
+    }
+  }
+
+  &__fb {
+    color: $color__fb;
+
+    &:hover {
+      &::before {
+        background: $color__fb;
+      }
+    }
+  }
+
+  &__twitter {
+    color: $color__twitter;
+
+    &:hover {
+      &::before {
+        background: $color__twitter;
+      }
+    }
+  }
+
+  &__instagram {
+    color: $color__instagram;
+
+    &:hover {
+      &::before {
+        background: $color__instagram;
+      }
+    }
+  }
+
+  &__google-plus {
+    color: $color__google-plus;
+
+    &:hover {
+      &::before {
+        background: $color__google-plus;
+      }
+    }
+  }
+
+  &__github {
+    color: $color__github;
+
+    &:hover {
+      &::before {
+        background: $color__github;
+      }
+    }
+  }
+
+  &__linkedin {
+    color: $color__linkedin;
+
+    &:hover {
+      &::before {
+        background: $color__linkedin;
+      }
+    }
+  }
+
+  &__pinterest {
+    color: $color__pinterest;
+
+    &:hover {
+      &::before {
+        background: $color__pinterest;
+      }
+    }
+  }
+
+  &__behance {
+    color: $color__behance;
+
+    &:hover {
+      &::before {
+        background: $color__behance;
+      }
+    }
+  }
+
+  &__vimeo {
+    color: $color__vimeo;
+
+    &:hover {
+      &::before {
+        background: $color__vimeo;
+      }
+    }
+  }
+
+  &__youtube {
+    color: $color__youtube;
+
+    &:hover {
+      &::before {
+        background: $color__youtube;
+      }
+    }
+  }
+
+  &__whatsapp {
+    color: $color__whatsapp;
+
+    &:hover {
+      &::before {
+        background: $color__whatsapp;
+      }
+    }
+  }
+
+  &__telegram {
+    color: $color__telegram;
+
+    &:hover {
+      &::before {
+        background: $color__telegram;
+      }
+    }
+  }
+
+  &__skype {
+    color: $color__skype;
+
+    &:hover {
+      &::before {
+        background: $color__skype;
+      }
+    }
+  }
+
+  &__stack-overflow {
+    color: $color__stack-overflow;
+
+    &:hover {
+      &::before {
+        background: $color__stack-overflow;
+      }
+    }
+  }
+
+  &__imdb {
+    color: $color__imdb;
+
+    &:hover {
+      &::before {
+        background: $color__imdb;
+      }
+    }
+  }
+}
 
 
 @media only screen and (max-width : 1199px) {
