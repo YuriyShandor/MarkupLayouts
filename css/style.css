@@ -782,6 +782,8 @@ section:nth-child(odd) {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .rounded-social-icons a {
@@ -959,4 +961,141 @@ section:nth-child(odd) {
 
 .rounded-social-icons__stack-overflow:hover {
   color: #ffa500;
+}
+
+.flip-card__block {
+  width: 100%;
+  padding: 30px 0;
+  background: #e0f2f1;
+  border-radius: 10px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flip-container {
+  margin: 15px 10px;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  width: 47%;
+  height: 40vh;
+}
+
+.flip-container .flipper {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-container .flipper-front, .flip-container .flipper-back {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.flip-container .flipper-front {
+  z-index: 10;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flip-container .flipper-front div {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.flip-container .flipper-back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background: #4db6ac;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.flip-container .flipper-back h5 {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.flip-container .flipper-back p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.flip-container .flipper-back a {
+  margin-top: 25px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #1976d2;
+  border-radius: 5px;
+  -webkit-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+
+.flip-container .flipper-back a:hover {
+  background: #0d47a1;
+}
+
+.flip-container:hover .flipper {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip-container:nth-child(1) .flipper-front {
+  background: url(../img/winter.jpg) no-repeat center/cover;
+}
+
+.flip-container:nth-child(2) .flipper-front {
+  background: url(../img/spring.jpg) no-repeat center/cover;
+}
+
+.flip-container:nth-child(3) .flipper-front {
+  background: url(../img/summer.jpg) no-repeat center/cover;
+}
+
+.flip-container:nth-child(4) .flipper-front {
+  background: url(../img/autumn.jpg) no-repeat center/cover;
 }
