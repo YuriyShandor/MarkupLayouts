@@ -1,5 +1,11 @@
 $(document).ready(function() {
-  // ============ Top nav-bar =============
+  // ============ Main nav-bar =============
+  $('.toggler-icon').on('click', function() {
+    $(this).toggleClass('toggler-icon_close');
+    $('.nav-bar').slideToggle('0.5s');
+  });
+
+  // ============ Nav-bar from top =============
   // // ============ For animate for desctop hover=============
   // $('.main-ul > li').hover(function() {
   //   $(this).children("ul").slideToggle('0.5s');
@@ -24,4 +30,10 @@ $(document).ready(function() {
     };
   };
   topBarForTablet();
+
+  // =============== Nav-bar from side =============
+  $('.fs-nav__toggler-icon').on('click', function() {
+    $(this).toggleClass('fs-nav__toggler-icon_close');
+    $(".fs-nav").toggleClass('fs-nav_active');
+  });
 });

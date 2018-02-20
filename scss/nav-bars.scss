@@ -1,5 +1,9 @@
 // to compile...
 
+body {
+  overflow-x: hidden;
+}
+
 @import "./_components/_header&footer.scss";
 // @import "./_components/_social-icons.scss";
 // @import "./_components/_flip-card.scss";
@@ -368,22 +372,213 @@
   }
 }
 
-@media only screen and (max-width : 767px) {
+// ============== Full width from side ==============
 
+.fs-nav__block {
+  width: 100%;
+  padding: 25px 0;
+  background: #eee;
+  position: relative;
+
+  .container {
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .site-logo {
+    width: 75px;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
-@media only screen and (max-width : 520px) {
+.fs-nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
 
+    li {
+      margin: 0 25px;
+
+      a {
+        text-decoration: none;
+        color: #000;
+        font-size: 24px;
+        font-weight: 600;
+        -webkit-transition: all, .3s;
+        transition: all, .3s;
+      }
+
+      &::after {
+        -webkit-transform: translateY(3px);
+                transform: translateY(3px);
+        content: '';
+        display: block;
+        width: 0;
+        margin: 0 auto;
+        height: 2px;
+        background: $red;
+        -webkit-transition: all, 0.3s;
+        transition: all, 0.3s;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+
+        a {
+          color: $red;
+        }
+      }
+    }
+  }
 }
 
-
-
-@media only screen and (max-width : 1199px) {
-
+.fs-nav__toggler-icon {
+  display: none;
 }
 
 @media only screen and (max-width : 991px) {
+  .fs-nav__block {
+    .container {
+      width: 100%;
+      padding: 0 30px;
+    }
 
+    .site-logo {
+      width: 50px;
+    }
+  }
+
+  .fs-nav {
+    width: 100%;
+    height: 400px;
+    background: #000;
+    position: absolute;
+    //right: -100%;
+    left: -100%;
+    top: -25px;
+    -webkit-transition: all, .5s;
+    transition: all, .5s;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    ul {
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+
+      li {
+        margin: 10px 0;
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+
+        a {
+          color: #fff;
+        }
+
+        &::after {
+          -webkit-transition: all, 1.3s;
+          transition: all, 1.3s;
+        }
+
+        &:hover {
+          background: #212121;
+
+          &::after {
+            width: 100%;
+          }
+
+          a {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+
+  .fs-nav_active {
+    //right: 0;
+    left: 0;
+  }
+
+  .fs-nav__toggler-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    cursor: pointer;
+    -webkit-transition: all, .5s;
+    transition: all, .5s;
+    position: absolute;
+    right: 30px;
+    top: 8px;
+
+    div {
+      width: 30px;
+      height: 3px;
+      background: #000;
+      margin-top: 5px;
+      -webkit-transition: all, 1.0s;
+      transition: all, 1.0s;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .fs-nav__toggler-icon_close {
+    div {
+      width: 30px;
+      height: 3px;
+      background: #fff;
+      margin-top: 5px;
+
+      &:first-child {
+        margin-top: 0;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        margin-top: -2px;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width : 767px) {
