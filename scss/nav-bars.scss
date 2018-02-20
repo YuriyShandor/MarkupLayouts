@@ -44,12 +44,78 @@
         -ms-flex-align: center;
             align-items: center;
 
-    &_left {
-      ul {
-        display: -ms-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+
+  }
+}
+
+.top-bar_left {
+  .main-ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    ul {
+      position: absolute;
+      display: none;
+      //left: -999999999999px;
+    }
+
+    li {
+      position: relative;
+      padding: 5px 10px;
+      background: #000;
+      border: 2px solid #0d47a1;
+
+      &:hover {
+        > a {
+          color: $red;
+        }
+      }
+    }
+
+    a {
+      color:#fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      -webkit-transition: all, .3s;
+      transition: all, .3s;
+    }
+
+    > li {
+      margin: 0 5px;
+      background: #212121;
+      border-radius: 5px;
+      border: none;
+
+      > a {
+        color: #eeff41;
+      }
+
+      // // For animate
+      // > ul {
+      //   left: 0;
+      //   top: 100%;
+      // }
+      //
+      // li > ul {
+      //   top: -2px;
+      //   left: 100%;
+      // }
+
+      &:hover > ul {
+        left: 0;
+        top: 100%;
+        display: block;
+      }
+
+      li:hover > ul {
+        top: -2px;
+        left: 100%;
+        display: block;
       }
     }
   }
