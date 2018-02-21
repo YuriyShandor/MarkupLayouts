@@ -36,4 +36,10 @@ $(document).ready(function() {
     $(this).toggleClass('fs-nav__toggler-icon_close');
     $(".fs-nav").toggleClass('fs-nav_active');
   });
+
+  // ================ Curtaine menu =================
+  $('.curt-menu__toggler-icon').on('click', function() {
+    $(this).toggleClass('curt-menu__toggler-icon_close');
+    $(".curt-menu__nav").toggleClass('curt-menu__nav_active');
+  });
 });
