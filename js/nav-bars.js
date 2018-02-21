@@ -37,9 +37,9 @@ $(document).ready(function() {
     $(".fs-nav").toggleClass('fs-nav_active');
   });
 
-  // ================ Curtaine menu =================
-  $('.curt-menu__toggler-icon').on('click', function() {
-    $(this).toggleClass('curt-menu__toggler-icon_close');
-    $(".curt-menu__nav").toggleClass('curt-menu__nav_active');
+  // ================ Full screen Curtaine menu =================
+  $('.fs-curt-menu__toggler-icon').on('click', function() {
+    $(this).toggleClass('fs-curt-menu__toggler-icon_close');
+    $(".fs-curt-menu__nav").toggleClass('fs-curt-menu__nav_active');
   });
 });

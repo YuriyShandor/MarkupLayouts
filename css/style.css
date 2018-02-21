@@ -203,8 +203,8 @@ body {
     height: 3px;
     background: #000;
     margin-top: 5px;
-    -webkit-transition: all, 1.0s;
-    transition: all, 1.0s;
+    -webkit-transition: all, .5s ease-in;
+    transition: all, .5s ease-in;
   }
   .header-nav .toggler-icon div:first-child {
     margin-top: 0;
@@ -219,7 +219,7 @@ body {
     margin-top: 5px;
   }
   .header-nav .toggler-icon_close div:first-child {
-    margin-top: 0;
+    margin-top: 1px;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }

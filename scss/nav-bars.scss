@@ -372,7 +372,7 @@ body {
   }
 }
 
-// ============== Full width from side ==============
+// ============== Full screen from side ==============
 
 .fs-nav__block {
   width: 100%;
@@ -584,9 +584,9 @@ body {
 }
 
 
-// ================== Curtain menu ====================
+// ================== Full screen on both sides ====================
 
-.curt-menu {
+.fs-curt-menu {
   width: 100%;
   padding: 25px 0;
   background: #2196f3;
@@ -612,8 +612,8 @@ body {
         margin: 0 25px;
 
         a {
-          font-size: 20px;
-          font-weight: 600;
+          font-size: 24px;
+          font-weight: 700;
           color: #fff;
           text-decoration: none;
           -webkit-transition: all, .3s;
@@ -643,10 +643,14 @@ body {
       }
     }
   }
+
+  &__toggler-icon {
+    display: none;
+  }
 }
 
 @media only screen and (max-width : 991px) {
-  .curt-menu {
+  .fs-curt-menu {
     .container {
       width: 100%;
     }
@@ -761,7 +765,7 @@ body {
       }
     }
 
-    .curt-menu__nav_active {
+    .fs-curt-menu__nav_active {
       .ul-wrapper {
         top: 50%;
       }
@@ -811,12 +815,12 @@ body {
         margin-top: 2px;
         -webkit-transition: all, .3s ease-in;
         transition: all, .3s ease-in;
-        -webkit-transition-delay: .5s;
-                transition-delay: .5s;
+        -webkit-transition-delay: .3s;
+                transition-delay: .3s;
       }
     }
 
-    .curt-menu__toggler-icon_close {
+    .fs-curt-menu__toggler-icon_close {
       span {
         -webkit-transform: rotate(0deg);
                 transform: rotate(0deg);
@@ -827,15 +831,36 @@ body {
   }
 }
 
-@media only screen and (max-width : 767px) {
 
+// ============== Nav-bar from left =================
+
+.fl-nav__block {
+  width: 100%;
+  padding: 25px 0;
+  background: #8d6e63;
+
+  .container {
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+
+  .site-logo {
+    width: 75px;
+
+    img {
+      width: 100%;
+    }
+  }
 }
-
-@media only screen and (max-width : 520px) {
-
-}
-
-
 
 @media only screen and (max-width : 1199px) {
 
