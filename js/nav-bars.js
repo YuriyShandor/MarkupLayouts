@@ -31,15 +31,21 @@ $(document).ready(function() {
   };
   topBarForTablet();
 
-  // =============== Nav-bar from side =============
+  // =============== Full screen nav-bar from side =============
   $('.fs-nav__toggler-icon').on('click', function() {
     $(this).toggleClass('fs-nav__toggler-icon_close');
     $(".fs-nav").toggleClass('fs-nav_active');
   });
 
-  // ================ Full screen Curtaine menu =================
+  // ================ Full screen nav-bar on both sides =================
   $('.fs-curt-menu__toggler-icon').on('click', function() {
     $(this).toggleClass('fs-curt-menu__toggler-icon_close');
     $(".fs-curt-menu__nav").toggleClass('fs-curt-menu__nav_active');
+  });
+
+  // ================ Full screen nav-bar on both sides =================
+  $('.fl-nav__toggler-icon').on('click', function() {
+    $(this).toggleClass('fl-nav__toggler-icon_close');
+    $(".").toggleClass('');
   });
 });
