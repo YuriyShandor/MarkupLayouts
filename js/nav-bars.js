@@ -46,6 +46,6 @@ $(document).ready(function() {
   // ================ Full screen nav-bar on both sides =================
   $('.fl-nav__toggler-icon').on('click', function() {
     $(this).toggleClass('fl-nav__toggler-icon_close');
-    $(".").toggleClass('');
+    $(".fl-nav").toggleClass('fl-nav_active');
   });
 });

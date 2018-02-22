@@ -924,14 +924,17 @@ body {
 @media only screen and (max-width : 991px) {
   .fl-nav__block {
     .container {
+      width: 100%;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;
           -ms-flex-direction: row-reverse;
               flex-direction: row-reverse;
+      overflow: visible;
     }
 
     .site-logo {
       width: 50px;
+      margin-right: 30px;
     }
   }
 
@@ -940,10 +943,16 @@ body {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    position: absolute;
+    top: -25px;
+    left: -255px;
+    -webkit-transition: all, .5s;
+    transition: all, .5s;
+    z-index: 300;
 
     &__toggler-icon {
-      margin-left: 25px;
-      margin-top: 5px;
+      margin-left: 30px;
+      margin-top: 32px;
       z-index: 450;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -971,7 +980,8 @@ body {
     }
 
     .fl-nav__toggler-icon_close {
-      margin-top: 7px;
+      margin-left: 10px;
+      margin-top: 41px;
 
       div {
         width: 30px;
@@ -998,16 +1008,18 @@ body {
     }
 
     ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: -ms-flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 255px;
+      background: #222;
+      padding: 30px 0;
 
       li {
-        margin: 0 25px;
+        margin: 5px 0;
+        padding: 20px 0;
+        text-align: center;
 
         a {
           font-size: 24px;
@@ -1017,27 +1029,15 @@ body {
           -webkit-transition: all, .3s;
           transition: all, .3s;
 
-          &::after {
-            -webkit-transform: translateY(3px);
-                    transform: translateY(3px);
-            content: '';
-            display: block;
-            width: 0;
-            margin: 0 auto;
-            height: 2px;
-            background: darken($red, 15%);
-            -webkit-transition: all, 0.3s;
-            transition: all, 0.3s;
-          }
-
           &:hover {
             &:after {
-              width: 100%;
+              width: 0%;
             }
           }
         }
 
         &:hover {
+          background: #000;
           a {
             color: darken($red, 15%);
           }
@@ -1045,12 +1045,10 @@ body {
       }
     }
   }
+
+  .fl-nav_active {
+    left: 0;
+  }
 }
 
-@media only screen and (max-width : 767px) {
-
-}
-
-@media only screen and (max-width : 520px) {
-
-}
+// ================= Accordion ===============
