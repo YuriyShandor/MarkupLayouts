@@ -1,8 +1,9 @@
 $(document).ready(function() {
   // ============ Main nav-bar =============
-  $('.toggler-icon').on('click', function() {
-    $(this).toggleClass('toggler-icon_close');
-    $('.nav-bar').slideToggle('0.5s');
+  $('.sliding-menu__toggler-icon').on('click', function() {
+    $(this).toggleClass('sliding-menu__toggler-icon_close');
+    $(".page-wrap").toggleClass('page-wrap_hide');
+    $(".sliding-menu").toggleClass('sliding-menu_active');
   });
 
   // ============ Nav-bar from top =============

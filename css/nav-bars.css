@@ -585,6 +585,193 @@ section:nth-child(odd) {
   color: #b71c1c;
 }
 
+.page-wrap {
+  width: 100%;
+  position: relative;
+  left: 0;
+  -webkit-transition: all, .5s;
+  transition: all, .5s;
+}
+
+.page-wrap_hide {
+  left: calc(100% - 90px);
+}
+
+.header-top {
+  width: 100%;
+  height: 75px;
+  background: rgba(183, 28, 28, 0.95);
+}
+
+.header-top .sliding-menu__toggler-icon {
+  display: none;
+}
+
+.sliding-menu {
+  z-index: 1000;
+  width: 100%;
+  height: 75px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sliding-menu__nav-bar {
+  width: 100%;
+  list-style: none;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.sliding-menu__nav-bar li {
+  margin: 0 25px;
+}
+
+.sliding-menu__nav-bar li a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all, .3s;
+  transition: all, .3s;
+}
+
+.sliding-menu__nav-bar li a::after {
+  margin: 0 auto;
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px);
+  content: '';
+  display: block;
+  width: 0;
+  height: 2.5px;
+  background: #fff;
+  -webkit-transition: all, .3s;
+  transition: all, .3s;
+}
+
+.sliding-menu__nav-bar li a:hover {
+  color: #fff;
+}
+
+.sliding-menu__nav-bar li a:hover:after {
+  width: 100%;
+}
+
+@media only screen and (max-width: 991px) {
+  .header-top {
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .header-top .container {
+    width: 100%;
+  }
+  .header-top .sliding-menu__toggler-icon {
+    margin-left: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .header-top .sliding-menu__toggler-icon div {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    margin-top: 5px;
+    -webkit-transition: all, .5s ease-in;
+    transition: all, .5s ease-in;
+  }
+  .header-top .sliding-menu__toggler-icon div:first-child {
+    margin-top: 0;
+  }
+  .header-top .sliding-menu__toggler-icon_close div {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+  }
+  .header-top .sliding-menu__toggler-icon_close div:first-child {
+    margin-top: 1px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .header-top .sliding-menu__toggler-icon_close div:nth-child(2) {
+    margin-top: -2px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .header-top .sliding-menu__toggler-icon_close div:last-child {
+    display: none;
+  }
+  .sliding-menu {
+    width: calc(100% - 90px);
+    height: 100%;
+    background: #222;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: calc((100% - 90px) * -1);
+    -webkit-transition: all, .5s;
+    transition: all, .5s;
+  }
+  .sliding-menu__nav-bar {
+    width: 100%;
+    list-style: none;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 50px 0;
+  }
+  .sliding-menu__nav-bar li {
+    width: 100%;
+    margin: 5px 0;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .sliding-menu__nav-bar li:hover {
+    background: #000;
+  }
+  .sliding-menu__nav-bar li a {
+    color: #b71c1c;
+  }
+  .sliding-menu__nav-bar li a:hover:after {
+    width: 0;
+  }
+  .sliding-menu_active {
+    left: 0;
+  }
+}
+
 .top-bar-block {
   width: 100%;
   padding: 25px 0;
