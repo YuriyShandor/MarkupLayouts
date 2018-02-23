@@ -5,7 +5,7 @@ $(document).ready(function() {
     $('.nav-bar').slideToggle('0.5s');
   });
 
-  //============== Simple accordion =========
+  // ============== Simple accordion =========
   $('.accordion__item-content').hide();
   $('.accordion__item-content:eq(2)').slideDown();
   $('.accordion__item-ttl:eq(2)').addClass('accordion__item-ttl_active');
@@ -24,5 +24,18 @@ $(document).ready(function() {
       }
 
     return false;
+  });
+
+  // ================== Nested Accordion ==================
+  $(".item-content").slideUp();
+  $(".item-ttl").click(function() {
+    $(this).toggleClass("item-ttl_active");
+    $(this).next().slideToggle(500);
+  })
+
+  $('.nested-accordion__item-content').slideUp();
+  $('.nested-accordion__item-ttl').click(function(){
+    $(this).next().slideToggle(500);
+    $(this).toggleClass('selected');
   });
 });
