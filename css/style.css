@@ -1243,3 +1243,21 @@ section:nth-child(odd) {
   padding: 15px 25px;
   border: 1px solid #0d47a1;
 }
+
+@media only screen and (max-width: 520px) {
+  .nested-accordion {
+    width: 95%;
+  }
+  .nested-accordion__item {
+    margin-top: 10px;
+  }
+  .nested-accordion__item-ttl {
+    font-size: 16px;
+  }
+  .nested-accordion__item-ttl:after {
+    right: 10px;
+  }
+  .nested-accordion__item-content {
+    padding: 10px 5px;
+  }
+}

@@ -27,12 +27,6 @@ $(document).ready(function() {
   });
 
   // ================== Nested Accordion ==================
-  $(".item-content").slideUp();
-  $(".item-ttl").click(function() {
-    $(this).toggleClass("item-ttl_active");
-    $(this).next().slideToggle(500);
-  })
-
   $('.nested-accordion__item-content').slideUp();
   $('.nested-accordion__item-ttl').click(function(){
     $(this).next().slideToggle(500);
