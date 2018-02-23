@@ -8,14 +8,85 @@ $color__instagram: #125688;
 $color__google-plus: #dd4b39;
 $color__github: #000;
 
-.sticky-social-icons {
+.sticky-social-icons_l {
+  width: 50px;
+  height: 290px;
   margin: 0;
   padding: 0;
   position: fixed;
   top: 50%;
-  left: 0;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  left: -25px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #333;
+  overflow: hidden;
+  -webkit-transition: all, .5s;
+  transition: all, .5s;
+
+  &:hover {
+    left: 0;
+    overflow: visible;
+  }
+
+  .l-social-icons {
+    list-style: none;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+
+    li {
+      margin: 10px 0;
+
+      a {
+        width: 230px;
+        font-size: 20px;
+        color: #fff;
+        border-radius: 3px;
+        text-decoration: none;
+        padding: 10px;
+        padding-left: 40px;
+        display: -ms-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-transform: translateX(-195px);
+                transform: translateX(-195px);
+        -webkit-transition: all, .5s;
+        transition: all, .5s;
+
+        &:hover {
+          -webkit-transform: translateX(-30px);
+                  transform: translateX(-30px);
+        }
+      }
+    }
+
+    &__fb {
+      background: $color__fb;
+    }
+
+    &__twitter {
+      background: $color__twitter;
+    }
+
+    &__instagram {
+      background: $color__instagram;
+    }
+
+    &__google-plus {
+      background: $color__google-plus;
+    }
+
+    &__github {
+      background: $color__github;
+    }
+  }
 }
 
 @media only screen and (max-width : 1199px) {
