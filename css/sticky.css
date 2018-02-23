@@ -593,6 +593,7 @@ section:nth-child(odd) {
   transform: translateY(-50%);
   background: #333;
   overflow: hidden;
+  opacity: 0.5;
   -webkit-transition: all, .5s;
   transition: all, .5s;
 }
@@ -600,6 +601,7 @@ section:nth-child(odd) {
 .sticky-social-icons_l:hover {
   left: 0;
   overflow: visible;
+  opacity: 1;
 }
 
 .sticky-social-icons_l .l-social-icons {
@@ -671,6 +673,7 @@ section:nth-child(odd) {
   transform: translateY(-50%);
   padding: 15px 10px;
   list-style: none;
+  opacity: 0.5;
   -webkit-transition: all, .5s;
   transition: all, .5s;
 }
@@ -678,6 +681,7 @@ section:nth-child(odd) {
 .sticky-social-icons_r:hover {
   background: #607d8b;
   right: 0;
+  opacity: 1;
 }
 
 .sticky-social-icons_r li {
@@ -729,4 +733,111 @@ section:nth-child(odd) {
 .sticky-social-icons_r__instagram:hover {
   background: #fff;
   color: #125688;
+}
+
+#btnToTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  bottom: 25px;
+  right: -55px;
+  background: #b71c1c;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 700;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: all, .5s;
+  transition: all, .5s;
+}
+
+#btnToTop:hover {
+  background: #8b1515;
+  opacity: 1;
+}
+
+#btnToTop span {
+  -webkit-animation-name: btnToTopIcon;
+  animation-name: btnToTopIcon;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+#btnToTop.show {
+  right: 25px;
+}
+
+@-webkit-keyframes btnToTopIcon {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  25% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  75% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes btnToTopIcon {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  25% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  75% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #btnToTop {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    font-size: 18px;
+  }
+  #btnToTop.show {
+    right: 20px;
+  }
 }
