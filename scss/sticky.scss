@@ -280,9 +280,22 @@ $color__github: #000;
 
 .sticky-nav-bar__block {
   width: 100%;
-  background: rgba(183, 28, 28, 0.90);
+  background: rgba(183, 28, 28, 0.95);
   padding: 25px 0;
-  z-index: 100;
+  z-index: 1000;
+  -webkit-transition: all, .5s;
+  transition: all, .5s;
+
+  &.stick {
+    position: fixed;
+    top: 0;
+    padding: 20px 0;
+    background: rgba(183, 28, 28, 0.75);
+  }
+
+  &:hover {
+    background: rgba(183, 28, 28, 0.95);
+  }
 }
 
 .sticky-nav {
