@@ -858,6 +858,10 @@ section:nth-child(odd) {
   background: rgba(183, 28, 28, 0.75);
 }
 
+.sticky-nav-bar__block.stick .sticky-nav-bar {
+  top: 20px;
+}
+
 .sticky-nav-bar__block:hover {
   background: rgba(183, 28, 28, 0.95);
 }
@@ -980,7 +984,7 @@ section:nth-child(odd) {
   .sticky-nav-bar {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 25px;
     left: 0;
     width: 100%;
     z-index: 10;
@@ -1049,4 +1053,28 @@ section:nth-child(odd) {
     padding-top: 15px;
     padding-bottom: 15px;
   }
+}
+
+.sections {
+  padding: 300px 0;
+}
+
+#section_01 {
+  background: #64b5f6 !important;
+}
+
+#section_02 {
+  background: #009688 !important;
+}
+
+#section_03 {
+  background: #03a9f4 !important;
+}
+
+#section_04 {
+  background: #cddc39 !important;
+}
+
+#section_05 {
+  background: #18ffff !important;
 }

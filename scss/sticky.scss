@@ -291,6 +291,12 @@ $color__github: #000;
     top: 0;
     padding: 20px 0;
     background: rgba(183, 28, 28, 0.75);
+
+    .sticky-nav {
+      &-bar {
+        top: 20px;
+      }
+    }
   }
 
   &:hover {
@@ -430,7 +436,7 @@ $color__github: #000;
     &-bar {
       display: none;
       position: absolute;
-      top: 50px;
+      top: 25px;
       left: 0;
       width: 100%;
       z-index: 10;
@@ -508,6 +514,34 @@ $color__github: #000;
         padding-bottom: 15px;
       }
     }
+  }
+}
+
+// ============ Sections ==========
+
+.sections {
+  padding: 300px 0;
+}
+
+#section {
+  &_01 {
+    background: #64b5f6 !important;
+  }
+
+  &_02 {
+    background: #009688 !important;
+  }
+
+  &_03 {
+    background: #03a9f4 !important;
+  }
+
+  &_04 {
+    background: #cddc39 !important;
+  }
+
+  &_05 {
+    background: #18ffff !important;
   }
 }
 
