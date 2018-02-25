@@ -594,6 +594,7 @@ section:nth-child(odd) {
   background: #333;
   overflow: hidden;
   opacity: 0.5;
+  z-index: 500;
   -webkit-transition: all, .5s;
   transition: all, .5s;
 }
@@ -674,6 +675,7 @@ section:nth-child(odd) {
   padding: 15px 10px;
   list-style: none;
   opacity: 0.5;
+  z-index: 500;
   -webkit-transition: all, .5s;
   transition: all, .5s;
 }
@@ -889,7 +891,17 @@ section:nth-child(odd) {
   margin: 0 25px;
 }
 
-.sticky-nav-bar li::after {
+.sticky-nav-bar li a {
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all, .3s;
+  transition: all, .3s;
+}
+
+.sticky-nav-bar li a::after {
   margin: 0 auto;
   -webkit-transform: translateY(1px);
   transform: translateY(1px);
@@ -902,20 +914,25 @@ section:nth-child(odd) {
   transition: all, .3s;
 }
 
-.sticky-nav-bar li:hover::after {
-  width: 100%;
-}
-
-.sticky-nav-bar li:hover a {
+.sticky-nav-bar li a:hover {
   color: #fff;
 }
 
-.sticky-nav-bar li a {
-  padding: 0;
-  font-size: 20px;
-  font-weight: 700;
-  color: #000;
-  text-decoration: none;
+.sticky-nav-bar li a:hover::after {
+  width: 100%;
+}
+
+.sticky-nav-bar li a.active {
+  color: #ffff00;
+}
+
+.sticky-nav-bar li a.active:after {
+  width: 100%;
+  background: #ffff00;
+}
+
+.sticky-nav-bar li.active::after {
+  width: 100%;
 }
 
 @media only screen and (max-width: 991px) {
@@ -1015,33 +1032,9 @@ section:nth-child(odd) {
     -webkit-transition: all, .3s;
     transition: all, .3s;
   }
-  .sticky-nav-bar li::after {
-    -webkit-transform: translateY(3px);
-    transform: translateY(3px);
-    content: '';
-    display: block;
-    width: 0;
-    margin: 0 auto;
-    height: 2px;
-    background: #fff;
-    -webkit-transition: all, 1.5s;
-    transition: all, 1.5s;
-  }
-  .sticky-nav-bar li:hover {
-    background: #8b1515;
-  }
-  .sticky-nav-bar li:hover::after {
-    width: 100%;
-  }
-  .sticky-nav-bar li:hover a {
-    color: #fff;
-  }
   .sticky-nav-bar li a {
-    color: #000;
     text-align: center;
     margin: 0 auto;
-    -webkit-transition: all, .3s;
-    transition: all, .3s;
   }
 }
 
