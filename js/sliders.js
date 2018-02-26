@@ -33,4 +33,32 @@ $(document).ready(function() {
    autoplay: true,
    autoplaySpeed: 5000
   });
+
+  // ================ Responsive slider ==========
+
+  $(".responsive-slider").slick({
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    rows: 2,
+    nextArrow: $(".responsive-slider__arrow_next"),
+    prevArrow: $(".responsive-slider__arrow_prev"),
+    dots: true,
+    dotsClass: 'responsive-slider__slick-dots',
+    responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 545,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+    ]
+  });
 });
