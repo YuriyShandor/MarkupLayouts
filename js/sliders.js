@@ -45,20 +45,29 @@ $(document).ready(function() {
     dots: true,
     dotsClass: 'responsive-slider__slick-dots',
     responsive: [
-        {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 545,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
         }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesPerRow: 1,
+          rows: 1,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
     ]
   });
 });

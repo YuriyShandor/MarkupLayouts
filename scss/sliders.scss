@@ -2,6 +2,11 @@
 
 @import "./_components/_header&footer.scss";
 
+// Remove margin of dots for all slider
+.slick-dotted.slick-slider {
+  margin: 0;
+}
+
 // ========== Simple slider ============
 
 .simple-slider {
@@ -437,7 +442,7 @@
     outline: none !important;
     width: 250px !important;
     height: 350px;
-    margin: 30px 20px;
+    margin: 30px auto;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -590,11 +595,11 @@
   }
 
   &_prev {
-    left: 30px;
+    left: 0px;
   }
 
   &_next {
-    right: 30px;
+    right: 0px;
   }
 }
 
@@ -603,7 +608,7 @@
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  bottom: 35px;
+  bottom: -20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -647,11 +652,7 @@
 @media only screen and (max-width : 1199px) {
   .responsive-slider {
     &__slide {
-      height: 600px;
-
-      h3 {
-        font-size: 36px;
-      }
+      margin: 30px auto;
     }
   }
 }
@@ -659,11 +660,7 @@
 @media only screen and (max-width : 991px) {
   .responsive-slider {
     &__slide {
-      height: 500px;
-
-      h3 {
-        font-size: 32px;
-      }
+      width: 290px !important;
     }
   }
 
@@ -671,29 +668,28 @@
     width: 35px;
     height: 35px;
     font-size: 28px;
-
-    &_prev {
-      left: 20px;
-    }
-
-    &_next {
-      right: 20px;
-    }
   }
 }
 
 @media only screen and (max-width : 767px) {
   .responsive-slider {
     &__slide {
-      height: 400px;
-
-      h3 {
-        font-size: 28px;
-      }
+      width: 225px !important;
+      height: 300px;
+      margin: 25px auto;
     }
   }
 }
 
+@media only screen and (max-width : 520px) {
+  .responsive-slider {
+    &__slide {
+      width: 275px !important;
+      height: 350px;
+      margin: 20px auto;
+    }
+  }
+}
 
 
 @media only screen and (max-width : 1199px) {
