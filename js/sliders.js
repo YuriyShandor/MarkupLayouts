@@ -30,7 +30,7 @@ $(document).ready(function() {
    prevArrow: $(".vertical-slider__arrow_prev"),
    dots: true,
    dotsClass: 'vertical-slider__slick-dots',
-   // autoplay: true,
-   // autoplaySpeed: 5000
+   autoplay: true,
+   autoplaySpeed: 5000
   });
 });

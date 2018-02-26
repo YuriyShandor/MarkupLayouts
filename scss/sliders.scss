@@ -298,9 +298,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  right: 30px;
   -webkit-transition: all, .5s;
   transition: all, .5s;
 
@@ -309,11 +307,11 @@
   }
 
   &_prev {
-    left: 30px;
+    top: 30px;
   }
 
   &_next {
-    right: 30px;
+    bottom: 30px;
   }
 }
 
@@ -322,20 +320,20 @@
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  bottom: 35px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
 
   li {
     list-style: none;
 
     button {
       font-size: 0;
-      width: 10px;
-      height: 10px;
+      width: 25px;
+      height: 3px;
       border: none;
-      border-radius: 10px;
+      border-radius: 3px;
       background: #fefefe;
       margin-right: 10px;
       outline: none;
@@ -359,6 +357,7 @@
   li.slick-active {
     button {
       background: darken(red, 15%);
+      height: 5px;
     }
   }
 }
@@ -366,7 +365,7 @@
 @media only screen and (max-width : 1199px) {
   .vertical-slider {
     &__slide {
-      height: 600px;
+      height: 600px !important;
 
       h3 {
         font-size: 36px;
@@ -378,7 +377,7 @@
 @media only screen and (max-width : 991px) {
   .vertical-slider {
     &__slide {
-      height: 500px;
+      height: 500px !important;
 
       h3 {
         font-size: 32px;
@@ -390,26 +389,35 @@
     width: 35px;
     height: 35px;
     font-size: 28px;
+    right: 20px;
 
     &_prev {
-      left: 20px;
+      top: 20px;
     }
 
     &_next {
-      right: 20px;
+      bottom: 20px;
     }
+  }
+
+  .vertical-slider__slick-dots {
+    left: -5px;
   }
 }
 
 @media only screen and (max-width : 767px) {
   .vertical-slider {
     &__slide {
-      height: 400px;
+      height: 400px !important;
 
       h3 {
         font-size: 28px;
       }
     }
+  }
+
+  .vertical-slider__slick-dots {
+    left: -15px;
   }
 }
 
