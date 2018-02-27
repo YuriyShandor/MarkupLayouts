@@ -70,4 +70,25 @@ $(document).ready(function() {
       }
     ]
   });
+
+  // ============ Counter slider =============
+
+  $('.counter-slider').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   nextArrow: $(".counter-slider__arrow_next"),
+   prevArrow: $(".counter-slider__arrow_prev"),
+   dots: true,
+   dotsClass: 'counter-slider__slick-dots',
+   // autoplay: true,
+   // autoplaySpeed: 5000
+  });
+
+  $('.counter-slider').on('init', function(event, slick){
+    $('.counter-slider__count').append('<div class="slider-count"><p><span id="current">1</span> of <span id="total">'+slick.slideCount+'</span></p></div>');
+  });
+
+  $('.counter-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    $('.slider-count #current').html(currentSlide+1);
+  });
 });
