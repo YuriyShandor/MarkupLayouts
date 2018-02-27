@@ -1355,3 +1355,80 @@ section:nth-child(odd) {
     border-bottom: none;
   }
 }
+
+.lineProgBar {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.lineProgBar__item {
+  width: 100%;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.lineProgBar__item:last-child {
+  margin-bottom: 0;
+}
+
+.lineProgBar__item-text {
+  width: inherit;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.lineProgBar__item-text span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.lineProgBar__item-progress {
+  width: inherit;
+  border: 2px solid #ddd;
+  padding: 2px;
+}
+
+.lineProgBar__item-progress .progres-rate {
+  width: 0%;
+  height: 10px;
+  background: #009dda;
+}
+
+@media only screen and (max-width: 1199px) {
+  .lineProgBar {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .lineProgBar {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .lineProgBar {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .lineProgBar {
+    width: 95%;
+  }
+}

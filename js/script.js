@@ -32,4 +32,47 @@ $(document).ready(function() {
     $(this).next().slideToggle(500);
     $(this).toggleClass('selected');
   });
+
+  // =============== Linear progress bar ==============
+  var lineProgBarStart = 0;
+  $(window).scroll(function() {
+    var oTop = $('.lineProgBar').offset().top - window.innerHeight;
+    if (lineProgBarStart == 0 && $(window).scrollTop() > oTop) {
+      $('.skill-rate__amount').each(function () {
+        $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+        },
+        {
+          duration: 3000,
+          easing: 'swing',
+          step: function (now) {
+          $(this).text(Math.ceil(now));
+        }
+        });
+      });
+      lineProgBarStart = 1;
+    }
+  });
+
+  $(function() {
+    var $section = $('.lineProgBar');
+
+    function loadDaBars() {
+      $(".progres-rate").each(function() {
+        $(this).data("origWidth",
+        $(this).width()).width(0).animate( {
+          width: $(this).data("origWidth")
+        }, 3000);
+      });
+    }
+
+    $(document).bind('scroll', function(e) {
+      var scrollOffset = $(document).scrollTop();
+      var containerOffset = $section.offset().top - window.innerHeight;
+      if (scrollOffset > containerOffset) {
+          loadDaBars();
+          $(document).unbind('scroll');
+      }
+    });
+  });
 });

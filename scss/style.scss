@@ -4,6 +4,8 @@
 @import "./_components/_social-icons.scss";
 @import "./_components/_flip-card.scss";
 
+// =============== Page scrolling progress ============
+
 // ================= Simple accordion ===============
 
 .accordion {
@@ -252,23 +254,83 @@
 }
 
 
+// ============= Linear progress bar ==================
 
+.lineProgBar {
+  margin: 0 auto;
+  width: 50%;
 
+  &__item {
+    width: 100%;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-text {
+      width: inherit;
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin-bottom: 20px;
+
+      span {
+        font-size: 14px;
+        font-weight: 700;
+        color: #444;
+        text-transform: uppercase;
+      }
+    }
+
+    &-progress {
+      width: inherit;
+      border: 2px solid #ddd;
+      padding: 2px;
+
+      .progres-rate {
+        width: 0%;
+        height: 10px;
+        background: #009dda;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width : 1199px) {
-
+  .lineProgBar {
+    width: 60%;
+  }
 }
 
 @media only screen and (max-width : 991px) {
-
+  .lineProgBar {
+    width: 75%;
+  }
 }
 
 @media only screen and (max-width : 767px) {
-
+  .lineProgBar {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width : 520px) {
-
+  .lineProgBar {
+    width: 95%;
+  }
 }
 
 
