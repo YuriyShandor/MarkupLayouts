@@ -1357,6 +1357,28 @@ section:nth-child(odd) {
   background: #b30000;
 }
 
+.counter-slider__count {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+
+.counter-slider__count .slider-count {
+  font-family: JosefinSans;
+  font-size: 25px;
+  font-weight: 400;
+  font-style: italic;
+  color: #fefefe;
+}
+
+.counter-slider__count .slider-count #current-slide {
+  color: #b71c1c;
+}
+
+.counter-slider__count .slider-count #total-slide {
+  color: #999;
+}
+
 @media only screen and (max-width: 1199px) {
   .counter-slider__slide {
     height: 600px;
@@ -1382,6 +1404,9 @@ section:nth-child(odd) {
     left: 20px;
   }
   .counter-slider__arrow_next {
+    right: 20px;
+  }
+  .counter-slider__count {
     right: 20px;
   }
 }
