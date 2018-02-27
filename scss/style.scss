@@ -148,22 +148,110 @@
 }
 
 
+// ============ Responsive card table ===========
 
-@media only screen and (max-width : 1199px) {
+.superhero-table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  overflow: hidden;
 
-}
+  thead {
+    background: #222;
+    color: $red;
+  }
 
-@media only screen and (max-width : 991px) {
+  tbody {
+    background: #bdbdbd;
+  }
 
+  tr, th, td {
+    border: 2px solid #999;
+  }
+
+  th, td {
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  th {
+    font-weight: 700;
+  }
+
+  td {
+    font-weight: 400;
+  }
 }
 
 @media only screen and (max-width : 767px) {
+  .superhero-table {
+    border: none;
 
+    thead {
+      display: none;
+    }
+
+    tbody {
+      background: transparent;
+    }
+
+    tr {
+      display: block;
+      margin-top: 20px;
+    }
+
+    td {
+      border: none;
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border-bottom: 2px solid #999;
+      position: relative;
+      padding-left: 50%;
+      background: #bdbdbd;
+      text-align: left;
+
+      &:before {
+        content: attr(data-label);
+        display: inline-block;
+        color: $red;
+        font-weight: 700;
+        margin-left: -100%;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        text-align: left;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        background: #222;
+        width: 45%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 0;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
 }
 
-@media only screen and (max-width : 520px) {
 
-}
 
 
 
