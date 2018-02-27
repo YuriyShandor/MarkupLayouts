@@ -813,36 +813,22 @@
 
   li {
     list-style: none;
+    margin: 0 10px;
 
-    button {
-      font-size: 0;
-      width: 10px;
-      height: 10px;
-      border: none;
-      border-radius: 10px;
-      background: #fefefe;
-      margin-right: 10px;
-      outline: none;
+    a {
+      font-family: JosefinSans;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 400;
+      color: #fefefe;
+      text-decoration: none;
       cursor: pointer;
-      padding: 0;
-      -webkit-transition: all, .5s;
-      transition: all, .5s;
-
-      &:hover {
-        background: lighten(red, 15%);
-      }
-    }
-
-    &:last-child {
-      button {
-        margin-right: 0;
-      }
     }
   }
 
   li.slick-active {
-    button {
-      background: darken(red, 15%);
+    a {
+      color: darken(red, 15%);
     }
   }
 }

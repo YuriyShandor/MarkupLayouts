@@ -1328,33 +1328,21 @@ section:nth-child(odd) {
 
 .counter-slider__slick-dots li {
   list-style: none;
+  margin: 0 10px;
 }
 
-.counter-slider__slick-dots li button {
-  font-size: 0;
-  width: 10px;
-  height: 10px;
-  border: none;
-  border-radius: 10px;
-  background: #fefefe;
-  margin-right: 10px;
-  outline: none;
+.counter-slider__slick-dots li a {
+  font-family: JosefinSans;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  color: #fefefe;
+  text-decoration: none;
   cursor: pointer;
-  padding: 0;
-  -webkit-transition: all, .5s;
-  transition: all, .5s;
 }
 
-.counter-slider__slick-dots li button:hover {
-  background: #ff4d4d;
-}
-
-.counter-slider__slick-dots li:last-child button {
-  margin-right: 0;
-}
-
-.counter-slider__slick-dots li.slick-active button {
-  background: #b30000;
+.counter-slider__slick-dots li.slick-active a {
+  color: #b30000;
 }
 
 .counter-slider__count {

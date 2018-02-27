@@ -88,6 +88,9 @@ $(document).ready(function() {
    nextArrow: $(".counter-slider__arrow_next"),
    prevArrow: $(".counter-slider__arrow_prev"),
    dots: true,
+   customPaging : function(slider, i) {
+    return '<a>'+(i + 1)+'</a>';
+    },
    dotsClass: 'counter-slider__slick-dots',
    autoplay: true,
    autoplaySpeed: 5000
