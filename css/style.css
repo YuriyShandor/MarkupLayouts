@@ -1417,8 +1417,9 @@ section:nth-child(odd) {
 
 .lineProgBar__item-progress {
   width: inherit;
-  border: 2px solid #ddd;
+  border: 2px solid #222;
   padding: 2px;
+  background: #fff;
 }
 
 .lineProgBar__item-progress .progres-rate {
@@ -1449,4 +1450,10 @@ section:nth-child(odd) {
   .lineProgBar {
     width: 95%;
   }
+}
+
+#progressbarTry {
+  width: 90%;
+  margin: 0 auto;
+  height: 10px;
 }

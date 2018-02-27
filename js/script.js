@@ -89,4 +89,16 @@ $(document).ready(function() {
       }
     });
   });
+
+  // =================
+  var tuluzz = new ProgressBar.Line(progressbarTry, {
+    strokeWidth: 2,
+    color:'#21abe9',
+    duration: 2000,
+    trailColor: '#000',
+    trailWidth: 2,
+    easing: 'easeOut',
+    svgStyle: {width: '100%', height: '100%'}
+  });
+  tuluzz.animate(0.75);
 });
