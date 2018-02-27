@@ -1,4 +1,18 @@
 $(document).ready(function() {
+  // ============ Page scrolling progress ==========
+  $(function() {
+    $(window).on("resize scroll", function() {
+    updateProgress(".page-progress");
+    });
+
+    function updateProgress(element) {
+      var height = $(document).height() - $(window).height();
+      var  progress = $(window).scrollTop() / height;
+
+      $(element).css("width", (progress * 100) + "%");
+    }
+  });
+
   // ============ Main nav-bar =============
   $('.toggler-icon').on('click', function() {
     $(this).toggleClass('toggler-icon_close');
