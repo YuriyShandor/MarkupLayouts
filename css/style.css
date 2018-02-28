@@ -1374,84 +1374,6 @@ section:nth-child(odd) {
   }
 }
 
-.lineProgBar {
-  margin: 0 auto;
-  width: 50%;
-}
-
-.lineProgBar__item {
-  width: 100%;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: 40px;
-}
-
-.lineProgBar__item:last-child {
-  margin-bottom: 0;
-}
-
-.lineProgBar__item-text {
-  width: inherit;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.lineProgBar__item-text span {
-  font-size: 14px;
-  font-weight: 700;
-  color: #444;
-  text-transform: uppercase;
-}
-
-.lineProgBar__item-progress {
-  width: inherit;
-  border: 2px solid #bdbdbd;
-  padding: 2px;
-  background: #fff;
-}
-
-.lineProgBar__item-progress .progres-rate {
-  width: 0%;
-  height: 10px;
-  background: #01579b;
-}
-
-@media only screen and (max-width: 1199px) {
-  .lineProgBar {
-    width: 60%;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  .lineProgBar {
-    width: 75%;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .lineProgBar {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width: 520px) {
-  .lineProgBar {
-    width: 95%;
-  }
-}
-
 .progress-bar-line__block {
   width: 60%;
   margin: 0 auto;
@@ -1479,4 +1401,58 @@ section:nth-child(odd) {
 .progress-bar-line__block .progress-bar-line__item-progress svg {
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
+}
+
+@media only screen and (max-width: 1199px) {
+  .progress-bar-line__block {
+    width: 75%;
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .progress-bar-line__block {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .progress-bar-line__block {
+    width: 95%;
+  }
+}
+
+.progress-bar-circle__block {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.progress-bar-circle__block .progress-bar-circle__item {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 25px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }

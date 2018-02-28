@@ -273,87 +273,87 @@
 }
 
 
-// ============= Linear progress bar ==================
+// // ============= Linear progress bar ==================
+//
+// .lineProgBar {
+//   margin: 0 auto;
+//   width: 50%;
+//
+//   &__item {
+//     width: 100%;
+//     display: -ms-flex;
+//     display: -webkit-box;
+//     display: -ms-flexbox;
+//     display: flex;
+//     -webkit-box-orient: vertical;
+//     -webkit-box-direction: normal;
+//         -ms-flex-direction: column;
+//             flex-direction: column;
+//     margin-bottom: 40px;
+//
+//     &:last-child {
+//       margin-bottom: 0;
+//     }
+//
+//     &-text {
+//       width: inherit;
+//       display: -ms-flex;
+//       display: -webkit-box;
+//       display: -ms-flexbox;
+//       display: flex;
+//       -webkit-box-pack: justify;
+//           -ms-flex-pack: justify;
+//               justify-content: space-between;
+//       margin-bottom: 20px;
+//
+//       span {
+//         font-size: 14px;
+//         font-weight: 700;
+//         color: #444;
+//         text-transform: uppercase;
+//       }
+//     }
+//
+//     &-progress {
+//       width: inherit;
+//       border: 2px solid #bdbdbd;
+//       padding: 2px;
+//       background: #fff;
+//
+//       .progres-rate {
+//         width: 0%;
+//         height: 10px;
+//         background: #01579b;
+//       }
+//     }
+//   }
+// }
+//
+// @media only screen and (max-width : 1199px) {
+//   .lineProgBar {
+//     width: 60%;
+//   }
+// }
+//
+// @media only screen and (max-width : 991px) {
+//   .lineProgBar {
+//     width: 75%;
+//   }
+// }
+//
+// @media only screen and (max-width : 767px) {
+//   .lineProgBar {
+//     width: 90%;
+//   }
+// }
+//
+// @media only screen and (max-width : 520px) {
+//   .lineProgBar {
+//     width: 95%;
+//   }
+// }
 
-.lineProgBar {
-  margin: 0 auto;
-  width: 50%;
-
-  &__item {
-    width: 100%;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: 40px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &-text {
-      width: inherit;
-      display: -ms-flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      margin-bottom: 20px;
-
-      span {
-        font-size: 14px;
-        font-weight: 700;
-        color: #444;
-        text-transform: uppercase;
-      }
-    }
-
-    &-progress {
-      width: inherit;
-      border: 2px solid #bdbdbd;
-      padding: 2px;
-      background: #fff;
-
-      .progres-rate {
-        width: 0%;
-        height: 10px;
-        background: #01579b;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width : 1199px) {
-  .lineProgBar {
-    width: 60%;
-  }
-}
-
-@media only screen and (max-width : 991px) {
-  .lineProgBar {
-    width: 75%;
-  }
-}
-
-@media only screen and (max-width : 767px) {
-  .lineProgBar {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width : 520px) {
-  .lineProgBar {
-    width: 95%;
-  }
-}
-
-// ================
+// ================ ProgressBar.js Line ===============
 
 .progress-bar-line__block {
   width: 60%;
@@ -385,22 +385,61 @@
 }
 
 @media only screen and (max-width : 1199px) {
-
+  .progress-bar-line__block {
+    width: 75%;
+    margin-top: 25px;
+  }
 }
 
 @media only screen and (max-width : 991px) {
-
+  .progress-bar-line__block {
+    width: 85%;
+  }
 }
 
 @media only screen and (max-width : 767px) {
-
+  .progress-bar-line__block {
+    width: 95%;
+  }
 }
 
-@media only screen and (max-width : 520px) {
+// =============== ProgressBar.js Circle =============
 
+.progress-bar-circle__block {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  .progress-bar-circle__item {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0 25px;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+  }
 }
-
-
 
 @media only screen and (max-width : 1199px) {
 
