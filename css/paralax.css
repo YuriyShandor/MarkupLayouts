@@ -624,7 +624,7 @@ body, html {
 
 .pimg div {
   padding: 20px 30px;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.75);
   font-family: JosefinSans;
   font-size: 36px;
   font-weight: 700;
@@ -649,4 +649,44 @@ body, html {
 .pimg4 {
   min-height: 100%;
   background-image: url(../img/pexels-photo-220444.jpeg);
+}
+
+@media only screen and (max-width: 991px) {
+  .header {
+    background-attachment: scroll;
+    min-height: 80%;
+  }
+  .pimg {
+    background-attachment: scroll;
+  }
+  .pimg div {
+    font-size: 28px;
+  }
+  .pimg1 {
+    min-height: 80%;
+  }
+  .pimg2 {
+    min-height: 300px;
+  }
+  .pimg3 {
+    min-height: 300px;
+  }
+  .pimg4 {
+    min-height: 80%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    min-height: 80%;
+  }
+  .pimg div {
+    font-size: 24px;
+  }
+  .pimg1 {
+    min-height: 75%;
+  }
+  .pimg4 {
+    min-height: 75%;
+  }
 }

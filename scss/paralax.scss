@@ -44,7 +44,7 @@ body, html {
 
   div {
     padding: 20px 30px;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.75);
     font-family: JosefinSans;
     font-size: 36px;
     font-weight: 700;
@@ -73,16 +73,55 @@ body, html {
 }
 
 
-@media only screen and (max-width : 1199px) {
-
-}
-
 @media only screen and (max-width : 991px) {
+  .header {
+    background-attachment: scroll;
+    min-height: 80%;
+  }
 
+  .pimg {
+    background-attachment: scroll;
+
+    div {
+      font-size: 28px;
+    }
+
+    &1 {
+      min-height: 80%;
+    }
+
+    &2 {
+      min-height: 300px;
+    }
+
+    &3 {
+      min-height: 300px;
+    }
+
+    &4 {
+      min-height: 80%;
+    }
+  }
 }
 
 @media only screen and (max-width : 767px) {
+  .header {
+    min-height: 80%;
+  }
 
+  .pimg {
+    div {
+      font-size: 24px;
+    }
+
+    &1 {
+      min-height: 75%;
+    }
+
+    &4 {
+      min-height: 75%;
+    }
+  }
 }
 
 @media only screen and (max-width : 520px) {
