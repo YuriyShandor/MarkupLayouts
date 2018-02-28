@@ -90,15 +90,41 @@ $(document).ready(function() {
     });
   });
 
-  // =================
-  var tuluzz = new ProgressBar.Line(progressbarTry, {
-    strokeWidth: 2,
-    color:'#21abe9',
-    duration: 2000,
-    trailColor: '#000',
-    trailWidth: 2,
-    easing: 'easeOut',
-    svgStyle: {width: '100%', height: '100%'}
-  });
-  tuluzz.animate(0.75);
+  // ============== ProgressBar.js ============
+  function progressBarLine() {
+    $('.progress-bar-line__item-progress').each(function(i) {
+      var progressBarline = new ProgressBar.Line(this, {
+        strokeWidth: 4,
+        easing: 'easeInOut',
+        duration: 3000,
+        color: '#bf360c',
+        trailColor: '#9e9e9e',
+        trailWidth: 4,
+        svgStyle: {width: '100%', height: '100%'},
+        text: {
+          style: {
+            fontWeight: '900',
+            color: '#333',
+            position: 'absolute',
+            right: '0',
+            top: '0',
+            padding: 0,
+            margin: 0,
+            transform: null
+          },
+          autoStyleContainer: false
+        },
+
+        step: function(state, bar) {
+          bar.setText(Math.round(bar.value() * 100) + ' %');
+        }
+      });
+
+      var value = ($(this).attr('value') / 100);
+
+      progressBarline.animate(value);
+    })
+  };
+
+  progressBarLine();
 });
