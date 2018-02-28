@@ -316,14 +316,14 @@
 
     &-progress {
       width: inherit;
-      border: 2px solid #222;
+      border: 2px solid #bdbdbd;
       padding: 2px;
       background: #fff;
 
       .progres-rate {
         width: 0%;
         height: 10px;
-        background: #009dda;
+        background: #01579b;
       }
     }
   }

@@ -2,7 +2,75 @@
 
 @import "./_components/_header&footer.scss";
 
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
 
+.header {
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+.pimg {
+  position: relative;
+  width: 100%;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  div {
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.95);
+    font-family: JosefinSans;
+    font-size: 36px;
+    font-weight: 700;
+    color: #f1f1f1;
+  }
+
+  &1 {
+    min-height: 100%;
+    background-image: url(../img/pexels-photo-374710.jpeg);
+  }
+
+  &2 {
+    min-height: 500px;
+    background-image: url(../img/pexels-photo-218983.jpeg);
+  }
+
+  &3 {
+    min-height: 500px;
+    background-image: url(../img/pexels-photo-281184.jpeg);
+  }
+
+  &4 {
+    min-height: 100%;
+    background-image: url(../img/pexels-photo-220444.jpeg);
+  }
+}
 
 
 @media only screen and (max-width : 1199px) {
