@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ProgressBars</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/progressbars.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-block__nav">
+      <div class="container nav-container">
+        <nav class="header-nav">
+          <div class="toggler-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <ul class="nav-bar">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="nav-bars.html" class="nav-link">Nav-bars</a></li>
+            <li class="nav-item"><a href="sticky.html" class="nav-link">Sticky</a></li>
+            <li class="nav-item"><a href="sliders.html" class="nav-link">Sliders</a></li>
+            <li class="nav-item"><a href="paralax.html" class="nav-link">Paralax</a></li>
+            <li class="nav-item"><a href="progressbars.html" class="nav-link">ProgressBars</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="header-block__heading">
+      <div class="container">
+        <h1>It`s a collection of markup layouts</h1>
+        <p>There is nav-bars, sliders, nice btns and another awesome marcup layouts</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Linear progress bar pure code -->
+  <!-- <section>
+    <div class="container">
+      <div class="section-heading">
+        <h2>Linear progress bar</h2>
+        <p></p>
+      </div>
+      <div class="lineProgBar" id="our-skills__block">
+        <div class="lineProgBar__item">
+          <div class="lineProgBar__item-text">
+            <span class="skill-ttl">Photoshop</span>
+            <span class="skill-rate"><span class="skill-rate__amount">79</span>%</span>
+          </div>
+          <div class="lineProgBar__item-progress">
+            <div class="progres-rate" style="width: 79%"></div>
+          </div>
+        </div>
+        <div class="lineProgBar__item">
+          <div class="lineProgBar__item-text">
+            <span class="skill-ttl">HTML/CSS</span>
+            <span class="skill-rate"><span class="skill-rate__amount">90</span>%</span>
+          </div>
+          <div class="lineProgBar__item-progress">
+            <div class="progres-rate" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="lineProgBar__item">
+          <div class="lineProgBar__item-text">
+            <span class="skill-ttl">JavaScript</span>
+            <span class="skill-rate"><span class="skill-rate__amount">69</span>%</span>
+          </div>
+          <div class="lineProgBar__item-progress">
+            <div class="progres-rate" style="width: 69%"></div>
+          </div>
+        </div>
+        <div class="lineProgBar__item">
+          <div class="lineProgBar__item-text">
+            <span class="skill-ttl">Wordpress</span>
+            <span class="skill-rate"><span class="skill-rate__amount">92</span>%</span>
+          </div>
+          <div class="lineProgBar__item-progress">
+            <div class="progres-rate" style="width: 92%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <h2>ProgressBar.js Line</h2>
+        <p></p>
+      </div>
+      <div class="progress-bar-line__block">
+        <div class="progress-bar-line__item">
+          <div class="progress-bar-line__item-ttl">HTML/CSS</div>
+          <div class="progress-bar-line__item-progress" value="95"></div>
+        </div>
+        <div class="progress-bar-line__item">
+          <div class="progress-bar-line__item-ttl">JavaScript</div>
+          <div class="progress-bar-line__item-progress" value="75"></div>
+        </div>
+        <div class="progress-bar-line__item">
+          <div class="progress-bar-line__item-ttl">Photoshop</div>
+          <div class="progress-bar-line__item-progress" value="65"></div>
+        </div>
+        <div class="progress-bar-line__item">
+          <div class="progress-bar-line__item-ttl">Wordpress</div>
+          <div class="progress-bar-line__item-progress" value="50"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <h2>ProgressBar.js Circle</h2>
+        <p></p>
+      </div>
+      <div class="progress-bar-circle__block">
+        <div class="progress-bar-circle__item" value="90"><span>HTML/CSS</span></div>
+        <div class="progress-bar-circle__item" value="75"><span>JavaScript</span></div>
+        <div class="progress-bar-circle__item" value="60"><span>Photoshop</span></div>
+        <div class="progress-bar-circle__item" value="70"><span>Wordpress</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <h2>ProgressBar.js SemiCircle</h2>
+        <p></p>
+      </div>
+      <div class="progress-bar-semicircle__block">
+        <div class="progress-bar-semicircle__item" value="90"><span>HTML/CSS</span></div>
+        <div class="progress-bar-semicircle__item" value="75"><span>JavaScript</span></div>
+        <div class="progress-bar-semicircle__item" value="60"><span>Photoshop</span></div>
+        <div class="progress-bar-semicircle__item" value="70"><span>Wordpress</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="nav-bars.html">Nav-bars</a></li>
+        <li><a href="sticky.html">Sticky</a></li>
+        <li><a href="sliders.html">Sliders</a></li>
+        <li><a href="paralax.html">Paralax</a></li>
+        <li><a href="progressbars.html">ProgressBars</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="js/progressbar.js" type="text/javascript"></script>
+  <script src="js/progressbarsMyScript.js" type="text/javascript"></script>
+</body>
+</html>
