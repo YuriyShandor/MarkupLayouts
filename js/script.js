@@ -144,23 +144,23 @@ $(document).ready(function() {
   function progressBarCircle() {
     $('.progress-bar-circle__item').each(function(i) {
       var progressBarCircle = new ProgressBar.Circle(this, {
-        strokeWidth: 4,
+        strokeWidth: 7,
         easing: 'easeOut',
         duration: 3000,
         color: '#bf360c',
         trailColor: '#9e9e9e',
-        trailWidth: 4,
+        trailWidth: 7,
         svgStyle: {width: '100%', height: '100%'},
         text: {
           style: {
             fontWeight: '900',
             color: '#333',
             position: 'absolute',
-            right: '0',
-            top: '0',
+            left: '50%',
+            top: '55%',
             padding: 0,
             margin: 0,
-            transform: null
+            transform: 'translateX(-50%)'
           },
           autoStyleContainer: false
         },
