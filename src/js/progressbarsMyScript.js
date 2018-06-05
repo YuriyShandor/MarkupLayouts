@@ -1,8 +1,6 @@
-'use strict';
-
-$(document).ready(function () {
+$(document).ready(function() {
   // ============ Main nav-bar =============
-  $('.toggler-icon').on('click', function () {
+  $('.toggler-icon').on('click', function() {
     $(this).toggleClass('toggler-icon_close');
     $('.nav-bar').slideToggle('0.5s');
   });
@@ -55,7 +53,7 @@ $(document).ready(function () {
 
   // Function for create progress bars
   function progressBarLine() {
-    $('.progress-bar-line__item-progress').each(function (i) {
+    $('.progress-bar-line__item-progress').each(function(i) {
       var progressBarline = new ProgressBar.Line(this, {
         strokeWidth: 4,
         easing: 'easeOut',
@@ -63,7 +61,7 @@ $(document).ready(function () {
         color: '#bf360c',
         trailColor: '#9e9e9e',
         trailWidth: 4,
-        svgStyle: { width: '100%', height: '100%' },
+        svgStyle: {width: '100%', height: '100%'},
         text: {
           style: {
             fontWeight: '900',
@@ -78,20 +76,20 @@ $(document).ready(function () {
           autoStyleContainer: false
         },
 
-        step: function step(state, progressBarline) {
+        step: function(state, progressBarline) {
           progressBarline.setText(Math.round(progressBarline.value() * 100) + ' %');
         }
       });
 
-      var value = $(this).attr('value') / 100;
+      var value = ($(this).attr('value') / 100);
 
       progressBarline.animate(value);
-    });
+    })
   };
 
   // Initialize function on scrolling
   var progressBarLineStart = 0;
-  $(window).scroll(function () {
+  $(window).scroll(function() {
     var oTop = $('.progress-bar-line__block').offset().top - window.innerHeight;
     if (progressBarLineStart == 0 && $(window).scrollTop() > oTop) {
       progressBarLine();
@@ -99,11 +97,12 @@ $(document).ready(function () {
     }
   });
 
+
   // ============== ProgressBar.js Circle ===============
 
   // Function for create progress bars
   function progressBarCircle() {
-    $('.progress-bar-circle__item').each(function (i) {
+    $('.progress-bar-circle__item').each(function(i) {
       var progressBarCircle = new ProgressBar.Circle(this, {
         strokeWidth: 7,
         //strokeWidth: 50, //for fill circle
@@ -113,7 +112,7 @@ $(document).ready(function () {
         trailColor: '#e0e0e0',
         trailWidth: 7,
         //trailWidth: 50, //for fill circle
-        svgStyle: { width: '100%', height: '100%' },
+        svgStyle: {width: '100%', height: '100%'},
         text: {
           style: {
             fontWeight: '900',
@@ -128,20 +127,20 @@ $(document).ready(function () {
           autoStyleContainer: false
         },
 
-        step: function step(state, progressBarCircle) {
+        step: function(state, progressBarCircle) {
           progressBarCircle.setText(Math.round(progressBarCircle.value() * 100) + ' %');
         }
       });
 
-      var value = $(this).attr('value') / 100;
+      var value = ($(this).attr('value') / 100);
 
       progressBarCircle.animate(value);
-    });
+    })
   };
 
   // Initialize function on scrolling
   var progressBarCircleStart = 0;
-  $(window).scroll(function () {
+  $(window).scroll(function() {
     var oTop = $('.progress-bar-circle__block').offset().top - window.innerHeight;
     if (progressBarCircleStart == 0 && $(window).scrollTop() > oTop) {
       progressBarCircle();
@@ -149,11 +148,12 @@ $(document).ready(function () {
     }
   });
 
+
   // ============== ProgressBar.js SemiCircle ===============
 
   // Function for create progress bars
   function progressBarSemiCircle() {
-    $('.progress-bar-semicircle__item').each(function (i) {
+    $('.progress-bar-semicircle__item').each(function(i) {
       var progressBarSemiCircle = new ProgressBar.SemiCircle(this, {
         strokeWidth: 7,
         //strokeWidth: 50, //for fill circle
@@ -163,7 +163,7 @@ $(document).ready(function () {
         trailColor: '#fff176',
         trailWidth: 7,
         //trailWidth: 50, //for fill circle
-        svgStyle: { width: '100%', height: '100%' },
+        svgStyle: {width: '100%', height: '100%'},
         text: {
           style: {
             fontWeight: '900',
@@ -177,10 +177,10 @@ $(document).ready(function () {
           },
           autoStyleContainer: false
         },
-        from: { color: '#90caf9' },
-        to: { color: '#0d47a1' },
+        from: {color: '#90caf9'},
+        to: {color: '#0d47a1'},
 
-        step: function step(state, progressBarSemiCircle) {
+        step: function(state, progressBarSemiCircle) {
           progressBarSemiCircle.path.setAttribute('stroke', state.color);
           var value = Math.round(progressBarSemiCircle.value() * 100);
           if (value === 0) {
@@ -193,15 +193,15 @@ $(document).ready(function () {
         }
       });
 
-      var value = $(this).attr('value') / 100;
+      var value = ($(this).attr('value') / 100);
 
       progressBarSemiCircle.animate(value);
-    });
+    })
   };
 
   // Initialize function on scrolling
   var progressBarSemiCircleStart = 0;
-  $(window).scroll(function () {
+  $(window).scroll(function() {
     var oTop = $('.progress-bar-semicircle__block').offset().top - window.innerHeight;
     if (progressBarSemiCircleStart == 0 && $(window).scrollTop() > oTop) {
       progressBarSemiCircle();
