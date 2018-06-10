@@ -22,15 +22,9 @@ $color__stack-overflow: #ffa500;
 .social-icons {
   margin-bottom: 75px;
   width: 100%;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
 
   a {
     text-decoration: none;
@@ -39,18 +33,10 @@ $color__stack-overflow: #ffa500;
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 
     .svg-inline--fa {
@@ -67,9 +53,7 @@ $color__stack-overflow: #ffa500;
       position: absolute;
       top: 50%;
       left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      -webkit-transition: all 0.3s ease-in-out;
+      transform: translate(-50%, -50%);
       transition: all 0.3s ease-in-out;
     }
 
@@ -243,15 +227,9 @@ $color__stack-overflow: #ffa500;
 
 .rounded-social-icons {
   width: 100%;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
 
   a {
     text-decoration: none;
@@ -261,16 +239,9 @@ $color__stack-overflow: #ffa500;
     height: 40px;
     border-radius: 40px;
     color: #fff;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     position: relative;
 
     &::before {
@@ -282,15 +253,12 @@ $color__stack-overflow: #ffa500;
       position: absolute;
       top: 50%;
       left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      -webkit-transition: all 0.3s ease-in-out;
+      transform: translate(-50%, -50%);
       transition: all 0.3s ease-in-out;
     }
 
     .svg-inline--fa {
       z-index: 10;
-      -webkit-transition: all 0.3s;
       transition: all 0.3s;
     }
 
@@ -300,8 +268,7 @@ $color__stack-overflow: #ffa500;
       }
 
       .svg-inline--fa {
-        -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
+        transform: rotate(360deg);
       }
     }
   }

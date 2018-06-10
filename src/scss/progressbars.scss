@@ -106,8 +106,7 @@
       height: 10px;
 
       svg {
-        -webkit-transform: translateY(-5px);
-                transform: translateY(-5px);
+        transform: translateY(-5px);
       }
     }
   }
@@ -139,18 +138,10 @@
 .progress-bar-circle__block {
   width: 90%;
   margin: 0 auto;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
   .progress-bar-circle__item {
     width: 200px;
@@ -166,8 +157,7 @@
       position: absolute;
       top: 40%;
       left: 50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
+      transform: translateX(-50%);
     }
   }
 }
@@ -209,18 +199,10 @@
   width: 90%;
   margin: 0 auto;
   margin-top: -25px;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
   .progress-bar-semicircle__item {
     width: 200px;
@@ -236,8 +218,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
+      transform: translateX(-50%);
     }
 
     .progressbar-text {

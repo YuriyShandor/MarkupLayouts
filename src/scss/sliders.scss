@@ -36,20 +36,10 @@
     .container {
       width: 100%;
       height: 100%;
-      display: -ms-flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     h3 {
@@ -86,21 +76,12 @@
   cursor: pointer;
   color: #000;
   font-size: 34px;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: all, .5s;
+  transform: translateY(-50%);
   transition: all, .5s;
 
   &:hover {
@@ -117,14 +98,11 @@
 }
 
 .simple-slider__slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   bottom: 35px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 
   li {
     list-style: none;
@@ -140,7 +118,6 @@
       outline: none;
       cursor: pointer;
       padding: 0;
-      -webkit-transition: all, .5s;
       transition: all, .5s;
 
       &:hover {
@@ -242,20 +219,10 @@
     .container {
       width: 100%;
       height: 100%;
-      display: -ms-flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     h3 {
@@ -292,19 +259,11 @@
   cursor: pointer;
   color: #000;
   font-size: 34px;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   right: 30px;
-  -webkit-transition: all, .5s;
   transition: all, .5s;
 
   &:hover {
@@ -321,14 +280,11 @@
 }
 
 .vertical-slider__slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   top: 50%;
   left: 10px;
-  -webkit-transform: translateY(-50%) rotate(90deg);
-          transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
 
   li {
     list-style: none;
@@ -344,7 +300,6 @@
       outline: none;
       cursor: pointer;
       padding: 0;
-      -webkit-transition: all, .5s;
       transition: all, .5s;
 
       &:hover {
@@ -443,15 +398,9 @@
     width: 250px !important;
     height: 350px;
     margin: 30px auto;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
 
     h3 {
       font-family: JosefinSans;
@@ -573,21 +522,12 @@
   cursor: pointer;
   color: #000;
   font-size: 34px;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: all, .5s;
+  transform: translateY(-50%);
   transition: all, .5s;
 
   &:hover {
@@ -604,14 +544,11 @@
 }
 
 .responsive-slider__slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   bottom: -20px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 
   li {
     list-style: none;
@@ -627,7 +564,6 @@
       outline: none;
       cursor: pointer;
       padding: 0;
-      -webkit-transition: all, .5s;
       transition: all, .5s;
 
       &:hover {
@@ -721,20 +657,10 @@
     .container {
       width: 100%;
       height: 100%;
-      display: -ms-flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     h3 {
@@ -771,21 +697,12 @@
   cursor: pointer;
   color: #000;
   font-size: 34px;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: all, .5s;
+  transform: translateY(-50%);
   transition: all, .5s;
 
   &:hover {
@@ -802,14 +719,11 @@
 }
 
 .counter-slider__slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   bottom: 35px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 
   li {
     list-style: none;

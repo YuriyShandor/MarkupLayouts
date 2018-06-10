@@ -12,7 +12,6 @@ body {
   width: 100%;
   position: relative;
   left: 0;
-  -webkit-transition: all, .5s;
   transition: all, .5s;
 }
 
@@ -34,13 +33,8 @@ body {
   z-index: 1000;
   width: 100%;
   height: 75px;
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -48,16 +42,9 @@ body {
   &__nav-bar {
     width: 100%;
     list-style: none;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
 
     li {
       margin: 0 25px;
@@ -67,19 +54,16 @@ body {
         font-weight: 700;
         color: #000;
         text-decoration: none;
-        -webkit-transition: all, .3s;
         transition: all, .3s;
 
         &::after {
           margin: 0 auto;
-          -webkit-transform: translateY(1px);
-                  transform: translateY(1px);
+          transform: translateY(1px);
           content: '';
           display: block;
           width: 0;
           height: 2.5px;
           background: #fff;
-          -webkit-transition: all, .3s;
           transition: all, .3s;
         }
 
@@ -97,13 +81,8 @@ body {
 
 @media only screen and (max-width : 991px) {
   .header-top {
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
 
     .container {
       width: 100%;
@@ -111,13 +90,8 @@ body {
 
     .sliding-menu__toggler-icon {
       margin-left: 30px;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      flex-direction: column;
       cursor: pointer;
 
 
@@ -126,7 +100,6 @@ body {
         height: 3px;
         background: #000;
         margin-top: 5px;
-        -webkit-transition: all, .5s ease-in;
         transition: all, .5s ease-in;
 
         &:first-child {
@@ -144,14 +117,12 @@ body {
 
         &:first-child {
           margin-top: 1px;
-          -webkit-transform: rotate(45deg);
-                  transform: rotate(45deg);
+          transform: rotate(45deg);
         }
 
         &:nth-child(2) {
           margin-top: -2px;
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg);
+          transform: rotate(-45deg);
         }
 
         &:last-child {
@@ -165,13 +136,10 @@ body {
     width: calc(100vw - 90px);
     height: 100%;
     background: #222;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
     position: fixed;
     top: 0;
     left: calc((100vw - 90px) * -1);
-    -webkit-transition: all, .5s;
     transition: all, .5s;
 
     .container {
@@ -181,14 +149,8 @@ body {
     &__nav-bar {
       width: 100%;
       list-style: none;
-      display: -ms-flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      flex-direction: column;
       padding: 50px 0;
 
       li {
@@ -235,16 +197,9 @@ body {
   background: #333;
 
   .container {
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .site-logo {
@@ -260,16 +215,9 @@ body {
 
     &__inside {
       width: 100%;
-      display: -ms-flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      justify-content: space-between;
+      align-items: center;
     }
 
     &_right {
@@ -291,7 +239,6 @@ body {
         border-radius: 3px;
         background: $red;
         color: #fff;
-        -webkit-transition: all, .3s;
         transition: all, .3s;
 
         &:hover {
@@ -311,9 +258,6 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 
     ul {
@@ -332,7 +276,6 @@ body {
         color:#fff;
         text-decoration: none;
         text-transform: uppercase;
-        -webkit-transition: all, .3s;
         transition: all, .3s;
 
         // Arrow
@@ -387,17 +330,6 @@ body {
         margin-top:-5px;
       }
 
-      // // For animate
-      // > ul {
-      //   left: 0;
-      //   top: 100%;
-      // }
-      //
-      // li > ul {
-      //   top: -2px;
-      //   left: 100%;
-      // }
-
       &:hover > ul {
         left: 0;
         top: 100%;
@@ -438,13 +370,8 @@ body {
 
       &_right {
         width: 100%;
-        display: -ms-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        justify-content: center;
         background: #424242;
         padding: 25px 0;
       }
@@ -452,15 +379,9 @@ body {
   }
 
   .top-bar__toggler-icon {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     cursor: pointer;
-    -webkit-transition: all, .5s;
     transition: all, .5s;
     position: absolute;
     right: 30px;
@@ -471,7 +392,6 @@ body {
       height: 3px;
       background: #fff;
       margin-top: 5px;
-      -webkit-transition: all, 1.0s;
       transition: all, 1.0s;
 
       &:first-child {
@@ -489,14 +409,12 @@ body {
 
       &:first-child {
         margin-top: 0;
-        -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
+        transform: rotate(45deg);
       }
 
       &:nth-child(2) {
         margin-top: -2px;
-        -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg);
+        transform: rotate(-45deg);
       }
 
       &:last-child {
@@ -507,10 +425,7 @@ body {
 
   .top-bar_left {
     .main-ul {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      flex-direction: column;
 
       ul {
         position: relative;
@@ -609,16 +524,9 @@ body {
   position: relative;
 
   .container {
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .site-logo {
@@ -634,9 +542,6 @@ body {
   ul {
     margin: 0;
     padding: 0;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     list-style: none;
 
@@ -648,20 +553,17 @@ body {
         color: #000;
         font-size: 24px;
         font-weight: 700;
-        -webkit-transition: all, .3s;
         transition: all, .3s;
       }
 
       &::after {
-        -webkit-transform: translateY(3px);
-                transform: translateY(3px);
+        transform: translateY(3px);
         content: '';
         display: block;
         width: 0;
         margin: 0 auto;
         height: 2px;
         background: $red;
-        -webkit-transition: all, 0.3s;
         transition: all, 0.3s;
       }
 
@@ -700,25 +602,15 @@ body {
     height: 400px;
     background: #000;
     position: absolute;
-    //right: -100%;
     left: -100%;
     top: -25px;
-    -webkit-transition: all, .5s;
     transition: all, .5s;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
 
     ul {
       width: 100%;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      flex-direction: column;
 
       li {
         margin: 10px 0;
@@ -731,7 +623,6 @@ body {
         }
 
         &::after {
-          -webkit-transition: all, 1.3s;
           transition: all, 1.3s;
         }
 
@@ -751,21 +642,14 @@ body {
   }
 
   .fs-nav_active {
-    //right: 0;
     left: 0;
   }
 
   .fs-nav__toggler-icon {
     z-index: 450;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     cursor: pointer;
-    -webkit-transition: all, .5s;
     transition: all, .5s;
     position: absolute;
     right: 30px;
@@ -776,7 +660,6 @@ body {
       height: 3px;
       background: #000;
       margin-top: 5px;
-      -webkit-transition: all, 1.0s;
       transition: all, 1.0s;
 
       &:first-child {
@@ -794,14 +677,12 @@ body {
 
       &:first-child {
         margin-top: 0;
-        -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
+        transform: rotate(45deg);
       }
 
       &:nth-child(2) {
         margin-top: -2px;
-        -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg);
+        transform: rotate(-45deg);
       }
 
       &:last-child {
@@ -827,13 +708,8 @@ body {
     ul {
       margin: 0;
       padding: 0;
-      display: -ms-flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      justify-content: center;
       list-style: none;
 
       li {
@@ -844,19 +720,16 @@ body {
           font-weight: 700;
           color: #fff;
           text-decoration: none;
-          -webkit-transition: all, .3s;
           transition: all, .3s;
 
           &::after {
-            -webkit-transform: translateY(3px);
-                    transform: translateY(3px);
+            transform: translateY(3px);
             content: '';
             display: block;
             width: 0;
             margin: 0 auto;
             height: 2px;
             background: #000;
-            -webkit-transition: all, 0.3s;
             transition: all, 0.3s;
           }
 
@@ -896,22 +769,14 @@ body {
         width: 100%;
         height: 100%;
         z-index: 370;
-        display: -ms-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        justify-content: center;
         position: absolute;
         top: -50%;
         left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-        -webkit-transition: all, .5s ease-out;
+        transform: translate(-50%, -50%);
         transition: all, .5s ease-out;
-        -webkit-transition-delay: .75s;
-                transition-delay: .75s;
+        transition-delay: .75s;
 
       }
 
@@ -924,7 +789,6 @@ body {
         background: #0d47a1;
         position: absolute;
         top: 0;
-        -webkit-transition: all, .5s;
         transition: all, .5s;
       }
 
@@ -938,24 +802,15 @@ body {
 
       ul {
         width: 100%;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        flex-direction: column;
         display: none;
 
 
         li {
           width: 100%;
           margin: 5px 0;
-          display: -ms-flex;
-          display: -webkit-box;
-          display: -ms-flexbox;
           display: flex;
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
-          -webkit-transition: all, .3s;
+          justify-content: center;
           transition: all, .3s;
 
           &:hover {
@@ -971,15 +826,13 @@ body {
             padding: 15px 0;
 
             &::after {
-              -webkit-transform: translateY(3px);
-                      transform: translateY(3px);
+              transform: translateY(3px);
               content: '';
               display: block;
               width: 0;
               margin: 0 auto;
               height: 2px;
               background: #0d47a1;
-              -webkit-transition: all, 0.3s;
               transition: all, 0.3s;
             }
 
@@ -1003,9 +856,6 @@ body {
       }
 
       ul {
-        display: -ms-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
       }
     }
@@ -1020,38 +870,26 @@ body {
       border-radius: 40px;
       background: #fff;
       cursor: pointer;
-      -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-              box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-      display: -ms-flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
       display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      justify-content: center;
+      align-items: center;
 
       span {
         font-size: 35px;
         font-weight: 700;
         color: #0d47a1;
-        -webkit-transform: rotate(-135deg);
-                transform: rotate(-135deg);
+        transform: rotate(-135deg);
         margin-left: -3px;
         margin-top: 2px;
-        -webkit-transition: all, .3s ease-in;
         transition: all, .3s ease-in;
-        -webkit-transition-delay: .3s;
-                transition-delay: .3s;
+        transition-delay: .3s;
       }
     }
 
     .fs-curt-menu__toggler-icon_close {
       span {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
+        transform: rotate(0deg);
         margin-left: 0;
         margin-top: -3px;
       }
@@ -1068,16 +906,9 @@ body {
   background: #8d6e63;
 
   .container {
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
     overflow: hidden;
   }
 
@@ -1091,9 +922,6 @@ body {
 }
 
 .fl-nav {
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 
   &__toggler-icon {
@@ -1104,9 +932,6 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 
     li {
@@ -1117,19 +942,16 @@ body {
         font-weight: 700;
         color: #000;
         text-decoration: none;
-        -webkit-transition: all, .3s;
         transition: all, .3s;
 
         &::after {
-          -webkit-transform: translateY(3px);
-                  transform: translateY(3px);
+          transform: translateY(3px);
           content: '';
           display: block;
           width: 0;
           margin: 0 auto;
           height: 2px;
           background: darken($red, 15%);
-          -webkit-transition: all, 0.3s;
           transition: all, 0.3s;
         }
 
@@ -1153,10 +975,7 @@ body {
   .fl-nav__block {
     .container {
       width: 100%;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: reverse;
-          -ms-flex-direction: row-reverse;
-              flex-direction: row-reverse;
+      flex-direction: row-reverse;
       overflow: visible;
     }
 
@@ -1167,14 +986,10 @@ body {
   }
 
   .fl-nav {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    flex-direction: row-reverse;
     position: absolute;
     top: -25px;
     left: -255px;
-    -webkit-transition: all, .5s;
     transition: all, .5s;
     z-index: 300;
 
@@ -1182,15 +997,9 @@ body {
       margin-left: 30px;
       margin-top: 32px;
       z-index: 450;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      flex-direction: column;
       cursor: pointer;
-      -webkit-transition: all, .05s;
       transition: all, .05s;
 
       div {
@@ -1198,7 +1007,6 @@ body {
         height: 3px;
         background: #000;
         margin-top: 5px;
-        -webkit-transition: all, .3s ease-in;
         transition: all, .3s ease-in;
 
         &:first-child {
@@ -1219,14 +1027,12 @@ body {
 
         &:first-child {
           margin-top: 0;
-          -webkit-transform: rotate(45deg);
-                  transform: rotate(45deg);
+          transform: rotate(45deg);
         }
 
         &:nth-child(2) {
           margin-top: -2px;
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg);
+          transform: rotate(-45deg);
         }
 
         &:last-child {
@@ -1236,10 +1042,7 @@ body {
     }
 
     ul {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      flex-direction: column;
       width: 255px;
       background: #222;
       padding: 30px 0;
@@ -1254,7 +1057,6 @@ body {
           font-weight: 700;
           color: #000;
           text-decoration: none;
-          -webkit-transition: all, .3s;
           transition: all, .3s;
 
           &:hover {
