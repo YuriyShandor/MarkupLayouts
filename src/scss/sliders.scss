@@ -835,11 +835,6 @@
     height: 250px;
   }
 
-  .slick-slide {
-    opacity: 0.5;
-    margin: 0 10px;
-  }
-
   .slick-center {
     opacity: 1;
   }
@@ -849,6 +844,8 @@
     height: 250px;
     position: relative;
     outline: none;
+    opacity: 0.5;
+    margin: 0 10px;
 
     &:before {
       display: block;
@@ -989,7 +986,13 @@
 
 @media only screen and (max-width : 1199px) {
   .center-mod-slider {
+    .slick-list {
+      height: 220px;
+    }
+
     &__slide {
+      height: 220px;
+
       h3 {
         font-size: 36px;
       }
@@ -999,7 +1002,12 @@
 
 @media only screen and (max-width : 991px) {
   .center-mod-slider {
+    .slick-list {
+      height: 175px;
+    }
     &__slide {
+      height: 175px;
+
       h3 {
         font-size: 32px;
       }
@@ -1024,6 +1032,210 @@
 @media only screen and (max-width : 767px) {
   .center-mod-slider {
     &__slide {
+      opacity: 1;
+
+      h3 {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+
+// ========== Variable Width Slider ============
+
+.vw-slider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  &__slide {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    outline: none;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    // Styles for Content
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h3 {
+      font-family: JosefinSans;
+      font-size: 42px;
+      font-weight: 400;
+      color: #fff;
+      margin: 0;
+    }
+
+    &_01 {
+      background: url(../img/vw-slider__slide-image_01.jpg) no-repeat center / cover;
+    }
+
+    &_02 {
+      background: url(../img/vw-slider__slide-image_02.jpeg) no-repeat center / cover;
+    }
+
+    &_03 {
+      background: url(../img/vw-slider__slide-image_03.jpeg) no-repeat center / cover;
+    }
+
+    &_04 {
+      background: url(../img/vw-slider__slide-image_04.jpeg) no-repeat center / cover;
+    }
+
+    &_05 {
+      background: url(../img/vw-slider__slide-image_05.jpeg) no-repeat center / cover;
+    }
+
+    &_06 {
+      background: url(../img/vw-slider__slide-image_06.jpeg) no-repeat center / cover;
+    }
+
+    &_07 {
+      background: url(../img/vw-slider__slide-image_07.jpeg) no-repeat center / cover;
+    }
+  }
+}
+
+.vw-slider__block {
+  position: relative;
+}
+
+.vw-slider__arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  color: #000;
+  font-size: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all, .5s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  &_prev {
+    left: 30px;
+  }
+
+  &_next {
+    right: 30px;
+  }
+}
+
+.vw-slider__slick-dots {
+  display: flex;
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  li {
+    list-style: none;
+
+    button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      border: none;
+      border-radius: 10px;
+      background: #fefefe;
+      margin-right: 10px;
+      outline: none;
+      cursor: pointer;
+      padding: 0;
+      transition: all, .5s;
+
+      &:hover {
+        background: lighten(red, 15%);
+      }
+    }
+
+    &:last-child {
+      button {
+        margin-right: 0;
+      }
+    }
+  }
+
+  li.slick-active {
+    button {
+      background: darken(red, 15%);
+    }
+  }
+}
+
+@media only screen and (max-width : 1199px) {
+  .vw-slider {
+    &__slide {
+      width: 800px;
+      height: 475px;
+
+      h3 {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 991px) {
+  .vw-slider {
+    &__slide {
+      width: 600px;
+      height: 400px;
+
+      h3 {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .vw-slider__arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 28px;
+
+    &_prev {
+      left: 20px;
+    }
+
+    &_next {
+      right: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .vw-slider {
+    &__slide {
+      width: 400px;
+      height: 276px;
+
       h3 {
         font-size: 28px;
       }

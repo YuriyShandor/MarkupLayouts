@@ -108,6 +108,36 @@ $(document).ready(function() {
     prevArrow: $(".center-mod-slider__arrow_prev"),
     dots: false,
     autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 767.99,
+        settings: {
+          centerMode: false,
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
+
+
+  // ============ Variable Width Slider =============
+
+  $('.vw-slider').slick({
+    initialSlide: 3,
+    centerMode: true,
+    variableWidth: true,
+    nextArrow: $(".vw-slider__arrow_next"),
+    prevArrow: $(".vw-slider__arrow_prev"),
+    dots: true,
+    dotsClass: 'vw-slider__slick-dots',
+    autoplay: true,
     autoplaySpeed: 5000
   });
 });
