@@ -97,16 +97,17 @@ $(document).ready(function() {
   });
 
 
-  // ============ Simple slider =============
+  // ============ Center Mode slider =============
 
   $('.center-mod-slider').slick({
-   slidesToShow: 1,
-   slidesToScroll: 1,
-   nextArrow: $(".center-mod-slider__arrow_next"),
-   prevArrow: $(".center-mod-slider__arrow_prev"),
-   dots: true,
-   dotsClass: 'center-mod-slider__slick-dots',
-   autoplay: true,
-   autoplaySpeed: 5000
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: '0px',
+    variableWidth: false,
+    nextArrow: $(".center-mod-slider__arrow_next"),
+    prevArrow: $(".center-mod-slider__arrow_prev"),
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 5000
   });
 });

@@ -831,9 +831,22 @@
   margin: 0;
   padding: 0;
 
+  .slick-list {
+    height: 250px;
+  }
+
+  .slick-slide {
+    opacity: 0.5;
+    margin: 0 10px;
+  }
+
+  .slick-center {
+    opacity: 1;
+  }
+
   &__slide {
-    width: 100%;
-    height: 700px;
+    width: 300px;
+    height: 250px;
     position: relative;
     outline: none;
 
@@ -868,20 +881,38 @@
     }
 
     &_01 {
-      background: url(../img/space-slider__bg_01.jpg) no-repeat center / cover;
+      background: url(../img/center-mod-slider__slide-image_01.jpg) no-repeat center / cover;
     }
 
     &_02 {
-      background: url(../img/space-slider__bg_02.jpg) no-repeat center / cover;
+      background: url(../img/center-mod-slider__slide-image_02.jpeg) no-repeat center / cover;
     }
 
     &_03 {
-      background: url(../img/space-slider__bg_03.jpg) no-repeat center / cover;
+      background: url(../img/center-mod-slider__slide-image_03.jpeg) no-repeat center / cover;
+    }
+
+    &_04 {
+      background: url(../img/center-mod-slider__slide-image_04.jpeg) no-repeat center / cover;
+    }
+
+    &_05 {
+      background: url(../img/center-mod-slider__slide-image_05.jpeg) no-repeat center / cover;
+    }
+
+    &_06 {
+      background: url(../img/center-mod-slider__slide-image_06.jpeg) no-repeat center / cover;
+    }
+
+    &_07 {
+      background: url(../img/center-mod-slider__slide-image_07.jpeg) no-repeat center / cover;
     }
   }
 }
 
+
 .center-mod-slider__block {
+  width: 100%;
   position: relative;
 }
 
@@ -957,10 +988,8 @@
 }
 
 @media only screen and (max-width : 1199px) {
-  .simple-slider {
+  .center-mod-slider {
     &__slide {
-      height: 600px;
-
       h3 {
         font-size: 36px;
       }
@@ -969,17 +998,15 @@
 }
 
 @media only screen and (max-width : 991px) {
-  .simple-slider {
+  .center-mod-slider {
     &__slide {
-      height: 500px;
-
       h3 {
         font-size: 32px;
       }
     }
   }
 
-  .simple-slider__arrow {
+  .center-mod-slider__arrow {
     width: 35px;
     height: 35px;
     font-size: 28px;
@@ -995,10 +1022,8 @@
 }
 
 @media only screen and (max-width : 767px) {
-  .simple-slider {
+  .center-mod-slider {
     &__slide {
-      height: 400px;
-
       h3 {
         font-size: 28px;
       }
