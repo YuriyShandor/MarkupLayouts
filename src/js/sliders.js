@@ -95,4 +95,18 @@ $(document).ready(function() {
    autoplay: true,
    autoplaySpeed: 5000
   });
+
+
+  // ============ Simple slider =============
+
+  $('.center-mod-slider').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   nextArrow: $(".center-mod-slider__arrow_next"),
+   prevArrow: $(".center-mod-slider__arrow_prev"),
+   dots: true,
+   dotsClass: 'center-mod-slider__slick-dots',
+   autoplay: true,
+   autoplaySpeed: 5000
+  });
 });
