@@ -9,7 +9,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const watch = require('gulp-watch');
 const browserSync = require('browser-sync').create();
-const sourcemaps = require('gulp-sourcemaps');
 
 // JS Compilation
 gulp.task('jsCompile', () => {
@@ -22,13 +21,12 @@ gulp.task('jsCompile', () => {
     }))
     .pipe(uglify())
     .pipe(gulp.dest('js'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 });
 
 // SASS Compilation
 gulp.task('sassCompile', () =>  {
   gulp.src(['src/scss/*.scss', '!src/scss/_components/*'])
-    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
         browsers: ['last 16 versions'],
@@ -38,9 +36,8 @@ gulp.task('sassCompile', () =>  {
 		.pipe(rename({
 			suffix: '.min'
 		}))
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 });
 
 // Start All Comands

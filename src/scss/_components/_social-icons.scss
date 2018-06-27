@@ -39,7 +39,7 @@ $color__stack-overflow: #ffa500;
     position: relative;
     transition: all 0.3s ease-in-out;
 
-    .svg-inline--fa {
+    i {
       z-index: 10;
     }
 
@@ -55,6 +55,7 @@ $color__stack-overflow: #ffa500;
       left: 50%;
       transform: translate(-50%, -50%);
       transition: all 0.3s ease-in-out;
+      z-index: 5;
     }
 
     &:hover {
@@ -257,7 +258,7 @@ $color__stack-overflow: #ffa500;
       transition: all 0.3s ease-in-out;
     }
 
-    .svg-inline--fa {
+    i {
       z-index: 10;
       transition: all 0.3s;
     }
@@ -267,7 +268,7 @@ $color__stack-overflow: #ffa500;
         background: #fff;
       }
 
-      .svg-inline--fa {
+      i {
         transform: rotate(360deg);
       }
     }

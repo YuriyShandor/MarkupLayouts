@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -276,11 +277,37 @@
     </div>
   </section>
 
+  <!-- jQuery UI Slider -->
   <section>
     <div class="container">
       <div class="section-heading">
-        <h2></h2>
+        <h2>jQuery UI Slider</h2>
         <p></p>
+      </div>
+      <div class="jquery-ui-slider__block">
+        <div class="jquery-ui-slider__block-item jquery-ui-slider__one-handle">
+          <div id="priceOne" class="ui-slider__range">
+            <div class="ui-slider-handle first-handle"></div>
+            <div class="ui-slider-handle second-handle"></div>
+          </div>
+          <div class="ui-slider__val">
+            <input type="number" id="maxCostOne" value="2000"/>
+            <span>$</span>
+          </div>
+        </div>
+        <div class="jquery-ui-slider__block-item jquery-ui-slider__two-handles">
+          <div id="price" class="ui-slider__range"></div>
+          <div class="ui-slider__inputs">
+            <div class="ui-slider__val">
+              <input type="number" id="minCost" value="70"/>
+              <span>$</span>
+            </div>
+            <div class="ui-slider__val">
+              <input type="number" id="maxCost" value="800"/>
+              <span>$</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -343,7 +370,8 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-  <script src="js/script.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
