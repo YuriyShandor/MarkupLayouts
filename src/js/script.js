@@ -43,6 +43,7 @@ $(document).ready(function() {
   });
 
   // ============ jQuery UI Slider ===========
+
   //jQuery UI Slider with one handle
   $("#priceOne").slider({
     min: 0,
@@ -54,11 +55,19 @@ $(document).ready(function() {
     },
   });
 
+  $("input#maxCostOne").change(function(){
+	  var value2=$("input#maxCostOne").val();
+
+	  if (value2 > 10000) { value2 = 10000; jQuery("input#maxCostOne").val(10000)};
+
+	  $("#priceOne").slider("values",1,value2);
+  });
+
   //jQuery UI Slider with two handles
   $("#price").slider({
-	  min: 70,
-	  max: 900,
-	  values: [70,900],
+	  min: 0,
+	  max: 10000,
+	  values: [500,7000],
 	  range: true,
     stop: function(event, ui) {
 		  jQuery("input#minCost").val(jQuery("#price").slider("values",0));
@@ -89,7 +98,7 @@ $(document).ready(function() {
 	  var value1=$("input#minCost").val();
 	  var value2=$("input#maxCost").val();
 
-	  if (value2 > 900) { value2 = 900; jQuery("input#maxCost").val(250)}
+	  if (value2 > 10000) { value2 = 10000; jQuery("input#maxCost").val(10000)}
 
 	  if(parseInt(value1) > parseInt(value2)){
 		  value2 = value1;
