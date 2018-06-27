@@ -503,7 +503,29 @@
 }
 
 
+// ============ Google Maps ===========
 
+.google-maps-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__item {
+    margin-top: 75px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+// Iframe Google Map
+
+#iframeGoogleMap {
+  width: 1000px;
+  height: 500px;
+}
 
 @media only screen and (max-width : 1199px) {
 
