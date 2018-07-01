@@ -335,24 +335,58 @@
           <h5 class="elements-ttl">Simple Google Map by iframe</h5>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.2655933193305!2d22.294903940862827!3d48.62149066813573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473919b944b6e3d9%3A0xda6ae0130042a3c!2z0KPQttCz0L7RgNC-0LQsINCX0LDQutCw0YDQv9Cw0YLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1suk!2sua!4v1530107307900" width="600" height="450" id="iframeGoogleMap" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-      </div>
+        <div class="google-maps-block__item">
+          <h5 class="elements-ttl">Custom Google Map by API</h5>
+          <div id="customMap">
+            <!-- https://snazzymaps.com - for customing -->
+            <script>
+              function initMap() {
+                var uluru = {lat: 50.357054, lng: 30.569993};
+                var map = new google.maps.Map(document.getElementById('customMap'), {
+                  zoom: 9,
+                  center: uluru,
+                  fullscreenControl: false,
+                  zoomControl: true,
+                  mapTypeControl: false,
+                  scaleControl: false,
+                  streetViewControl: false,
+                  rotateControl: false
+                });
 
-      <!-- <div id="simpleMap">
-        <script>
-          function initMap() {
-            var uluru = {lat: 50.435481, lng: 30.357139};
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 16,
-              center: uluru,
-              disableDefaultUI: true
-            });
-            var marker = new google.maps.Marker({
-              position: uluru,
-              map: map
-            });
-          }
-        </script>
-      </div> -->
+                $.getJSON("js/map-style.json", function(data) {
+                  map.setOptions({styles: data});
+                });
+
+                marker = new google.maps.Marker({
+                position: {lat: 50.450053, lng: 30.523582},
+                map: map,
+                animation: google.maps.Animation.BOUNCE
+                });
+
+                var image = 'img/marker-icon.svg';
+
+                marker = new google.maps.Marker({
+                  position: {lat: 50.347655, lng: 30.954397},
+                  map: map,
+                  icon: image
+                });
+
+                marker = new google.maps.Marker({
+                  position: {lat: 50.065102, lng: 29.902126},
+                  map: map,
+                  icon: image
+                });
+
+                marker = new google.maps.Marker({
+                  position: {lat: 50.138203, lng: 30.737215},
+                  map: map,
+                  icon: image
+                });
+              }
+            </script>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -398,6 +432,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
   <script src="js/script.min.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSm0REwsZmPTwR3albXKa_of4o7nAansA&callback=initMap"></script>
+
 </body>
 </html>

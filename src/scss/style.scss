@@ -523,27 +523,73 @@
 // Iframe Google Map
 
 #iframeGoogleMap {
-  width: 1000px;
+  width: 900px;
   height: 500px;
 }
 
 @media only screen and (max-width : 1199px) {
-
+  #iframeGoogleMap {
+    width: 800px;
+    height: 450px;
+  }
 }
 
 @media only screen and (max-width : 991px) {
-
+  #iframeGoogleMap {
+    width: 700px;
+    height: 400px;
+  }
 }
 
 @media only screen and (max-width : 767px) {
-
+  #iframeGoogleMap {
+    width: 500px;
+    height: 300px;
+  }
 }
 
 @media only screen and (max-width : 520px) {
+  #iframeGoogleMap {
+    width: 285px;
+    height: 175px;
+  }
+}
+
+// Google Maps API Map
+
+#customMap {
+  width: 900px;
+  height: 500px;
 
 }
 
+@media only screen and (max-width : 1199px) {
+  #customMap {
+    width: 800px;
+    height: 450px;
+  }
+}
 
+@media only screen and (max-width : 991px) {
+  #customMap {
+    width: 700px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #customMap {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width : 520px) {
+  #customMap {
+    width: 95%;
+    height: 175px;
+  }
+}
 
 @media only screen and (max-width : 1199px) {
 
