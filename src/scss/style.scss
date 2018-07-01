@@ -1,6 +1,7 @@
 @import "./_components/_header&footer.scss";
 @import "./_components/_social-icons.scss";
 @import "./_components/_flip-card.scss";
+@import "./_components/_humburger.scss";
 
 // =============== Page scrolling progress ============
 
@@ -503,6 +504,31 @@
 }
 
 
+// ================== Hamburgers ======================
+
+.humburgers-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hamburger-block {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $red;
+    margin-bottom: 10px;
+  }
+}
+
 // ============ Google Maps ===========
 
 .google-maps-block {
@@ -590,6 +616,9 @@
     height: 175px;
   }
 }
+
+
+
 
 @media only screen and (max-width : 1199px) {
 

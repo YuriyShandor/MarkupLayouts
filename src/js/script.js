@@ -107,22 +107,8 @@ $(document).ready(function() {
 	  $("#price").slider("values",1,value2);
   });
 
-  // ============ Google Maps ===========
-
-  // Simple Google Map
-
-  // $(function(){
-  //   function initMap(){
-  //     var uluru = {lat: 50.435481, lng: 30.357139};
-  //     var map = new google.maps.Map($('#simpleMap'), {
-  //       zoom: 16,
-  //       center: uluru,
-  //       disableDefaultUI: true
-  //     });
-  //     var marker = new google.maps.Marker({
-  //       position: uluru,
-  //       map: map
-  //     });
-  //   }
-  // });
+  // =============== Humburger ==============
+  $('.hamburger').on('click', function() {
+    $(this).toggleClass('is-active');
+  });
 });
