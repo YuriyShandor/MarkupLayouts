@@ -618,7 +618,60 @@
 }
 
 
+// ================= Custom Scrollar ===============
 
+.scrollbar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.scrollbar-block {
+  width: 75px;
+  height: 200px;
+  margin: 20px;
+  background: #e0e0e0;
+  overflow-y: scroll;
+
+  &__inner {
+    height: 500px;
+  }
+
+  &::-webkit-scrollbar{
+    width: 12px;
+    background: #bdbdbd;
+    border-radius: 5.5px;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    border-radius: 5.5px;
+  }
+
+  &_black {
+    &::-webkit-scrollbar-thumb{
+      background: black;
+    }
+  }
+
+  &_red {
+    &::-webkit-scrollbar-thumb{
+      background: red;
+    }
+  }
+
+  &_thin {
+    &::-webkit-scrollbar{
+      width: 8px;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+      background: blue;
+    }
+  }
+}
 
 @media only screen and (max-width : 1199px) {
 
