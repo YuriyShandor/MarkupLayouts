@@ -111,4 +111,36 @@ $(document).ready(function() {
   $('.hamburger').on('click', function() {
     $(this).toggleClass('is-active');
   });
+
+
+  // ================= Move Background on mouse move ===============
+  let moveBgFollowX = 0;
+  let moveBgFollowY = 0;
+  let moveBgX = 0;
+  let moveBgY = 0;
+  let moveBgFriction = 1 / 25;
+
+  function moveBackground() {
+    moveBgX += (moveBgFollowX - moveBgX) * moveBgFriction;
+    moveBgY += (moveBgFollowY - moveBgY) * moveBgFriction;
+
+    let translate = 'translate(' + moveBgX + 'px, ' + moveBgY + 'px) scale(1.1)';
+
+    $('.move-bg__image').css({
+      '-webit-transform': translate,
+      '-moz-transform': translate,
+      'transform': translate
+    });
+    window.requestAnimationFrame(moveBackground);
+  }
+
+  $('.move-bg').on('mousemove click', function(e) {
+    let lMouseX = Math.max(-100, Math.min(100, $('.move-bg').width() / 2 - e.clientX));
+    let lMouseY = Math.max(-100, Math.min(100, $('.move-bg').height() / 2 - e.clientY));
+    moveBgFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+    moveBgFollowY = (10 * lMouseY) / 100;
+
+  });
+
+  moveBackground();
 });

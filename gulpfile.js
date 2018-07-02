@@ -13,6 +13,7 @@ const browserSync = require('browser-sync').create();
 // JS Compilation
 gulp.task('jsCompile', () => {
   gulp.src('src/js/*.js')
+    .pipe(watch('src/js/*.js'))
     .pipe(babel({
       presets: ['env']
     }))
@@ -27,6 +28,7 @@ gulp.task('jsCompile', () => {
 // SASS Compilation
 gulp.task('sassCompile', () =>  {
   gulp.src(['src/scss/*.scss', '!src/scss/_components/*'])
+    .pipe(watch('src/scss/*.scss'))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
         browsers: ['last 16 versions'],
